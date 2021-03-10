@@ -8,9 +8,9 @@
 </head>
 <body>
 <!-- HEADER -->
-    <header>
-        <nav>        
-                <img src="#" alt="logo">
+    <header>      
+        <img src="#" alt="logo">
+        <nav>  
             <ul>
                 <li><a class="#" href="#">Hébergements</a></li>
                 <li><a class="#" href="#">Activités</a></li>
@@ -18,28 +18,30 @@
             </ul>
         </nav>
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-        <p>En plein centre ville ou en pleine nature</p>
+            <p>En plein centre ville ou en pleine nature</p>
     </header>
 <!-- SECTION RECHERCHE -->
     <section id="Search">
-        <form class="#" action="#">
-            <input type="text" placeholder="Marseille, France" name="search">
+        <form method="post" action="#">
+            <input type="search" placeholder="Marseille, France" name="search">
             <button type="submit">Rechercher</button>
         </form>
-        <ul>
-            <li><h2>Filtres</h2></li>
-            <li>Economique</li>
-            <li>Familial</li>
-            <li>Romantique</li>
-            <li>Animaux autorisés</li>
-        </ul>
+        <form method="#" action="#">
+            <p>
+                <h2>Filtre</h2>
+                <input type="checkbox" name="Economique" id="Economique" /> <label for="Economique"><h2>Economique</h2></label>
+                <input type="checkbox" name="Familial" id="Familial" /> <label for="Familial"><h2>Familial</h2></label>
+                <input type="checkbox" name="Romantique" id="Romantique" /> <label for="Romantique"><h2>Romantique</h2></label>
+                <input type="checkbox" name="Animauxautorises" id="Animauxautorises" /> <label for="Animauxautorises"><h2>Animaux autorisés</h2></label>
+            </p>
+        </form>
         <p>Plus de 500 logements sont disponibles dans cette ville</p>
     </section>
 <!-- SECTION RESULTATS HEBERGEMENTS -->
 <!-- Utilisation de Flexbox et de Cards 
         VOIR : https://developer.mozilla.org/fr/docs/Web/CSS/Layout_cookbook/Card et https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox -->
     <section id="Results">
-        <div class="Rentals">
+        <div id="Rentals">
             <h1>Hébergements à Marseille</h1>
                 <div class="flex-container">
                     <div class="card">
@@ -87,35 +89,37 @@
                 </div> 
                 <h2>Afficher plus</h2>
         </div>
-        <div class="Popular">
-            <h1>Les plus populaires</h1>
-                <div class="flex-container">
-                    <div class="card">
-                        <img src="#" alt="#">
-                            <div class="container">
-                                <h2>Hôtel Le soleil du matin</h2>
-                                <p>Nuit à partir de 128€</p>
-                            </div>
+        <aside>
+            <div id="Popular">
+                <h1>Les plus populaires</h1>
+                    <div class="flex-container">
+                        <div class="card">
+                            <img src="#" alt="#">
+                                <div class="container">
+                                    <h2>Hôtel Le soleil du matin</h2>
+                                    <p>Nuit à partir de 128€</p>
+                                </div>
+                        </div>
+                        <div class="card">
+                            <img src="#" alt="#">
+                                <div class="container">
+                                    <h2>Au coeur de l'eau</br>Chambres d'hôtes</h2>
+                                    <p>Nuit à partir de 71€</p>
+                                </div>
+                        </div>
+                        <div class="card">
+                            <img src="#" alt="#">
+                                <div class="container">
+                                    <h2>Hôtel Tout bleu et Blanc</h2>
+                                    <p>Nuit à partir de 68€</p>
+                                </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <img src="#" alt="#">
-                            <div class="container">
-                                <h2>Au coeur de l'eau</br>Chambres d'hôtes</h2>
-                                <p>Nuit à partir de 71€</p>
-                            </div>
-                    </div>
-                    <div class="card">
-                        <img src="#" alt="#">
-                            <div class="container">
-                                <h2>Hôtel Tout bleu et Blanc</h2>
-                                <p>Nuit à partir de 68€</p>
-                            </div>
-                    </div>
-                </div>
-        </div>
+            </div>
+        </aside>
     </section>
 <!-- SECTION RESULTATS ACTIVITES -->
-    <!-- VOIR : https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout -->
+    <!-- VOIR : https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout et https://css-tricks.com/best-way-implement-wrapper-css/ et https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox-->
     <section id="Activities">
         <h1>Activités à Marseille</h1>
         <div class="wrapper">
