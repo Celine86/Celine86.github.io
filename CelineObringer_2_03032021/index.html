@@ -33,153 +33,106 @@
     <section id="Search">
         <form class="formmapsearch" method="post" action="#">
             <i class="fas fa-map-marker-alt"></i>
-            <input type="search" placeholder="Marseille, France" name="search">
+            <input type="search" placeholder="Marseille, France" name="search" class="inputmapsearch">
             <input type="submit" value="Rechercher" class="btnmapsearch">
         </form>
-        <form method="post" action="#">
-                <h3>Filtre</h3>
-                <input type="checkbox" name="filter" value="Economique" /> <label for="Economique">Economique</label>
-                <input type="checkbox" name="filter" value="Familial" /> <label for="Familial">Familial</label>
-                <input type="checkbox" name="filter" value="Romantique" /> <label for="Romantique">Romantique</label>
-                <input type="checkbox" name="filter" value="Animauxautorises" /> <label for="Animauxautorises">Animaux autorisés</label>
-        </form>
-
-        <p>Plus de 500 logements sont disponibles dans cette ville</p>
-
+        <form class="formfilter" method="post" action="#">
+                <h4>Filtres</h4>
+                <label><input type="checkbox" id="opteconomique" name="opteco" value="Economique"><span class="spancustomlabel"><i class="fas fa-money-bill-wave"></i><h4>Economique</h4></span></label>
+                <label><input type="checkbox" id="optfamilial" name="optfamilial" value="Familial"><span class="spancustomlabel"><i class="fas fa-child"></i><h4>Familial</h4></span></label>
+                <label><input type="checkbox" id="optromantique" name="optromantique" value="Romantique"><span class="spancustomlabel"><i class="fas fa-heart"></i><h4>Romantique</h4></span></label>
+                <label><input type="checkbox" id="optanimauxok" name="optanimauxok" value="Animauxautorises"><span class="spancustomlabel"><i class="fas fa-dog"></i><h4>Animaux Autorisés</h4></span></label>
+       </form>
+       <!-- Note : trouver comment bien positionner les .fa pour un peu recouvrir le span-->
+       <span class="ResultsNumber"><i class="fas fa-info"></i><p>Plus de 500 logements sont disponibles dans cette ville</p></span>
+       <!-- Note : trouver comment aligner le .fa avec le texte -->
     </section>
 <!-- SECTION RESULTATS HEBERGEMENTS -->
-<!-- Utilisation de Flexbox et de Cards 
-        VOIR : https://developer.mozilla.org/fr/docs/Web/CSS/Layout_cookbook/Card et https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox -->
     <section id="Results">
         <div id="Rentals">
             <h2>Hébergements à Marseille</h2>
-                <div class="flex-container">
-                    <div class="card">
+                <div class="CardsRental">
+                    <div>
                         <img src="design/images/hebergements/desktop/AubergeLaCannebiere.jpg" alt="Auberge La Cannebiere">
-                            <div class="cardcontainer">
-                                <h3>Auberge la Cannebière</h3>
-                                <p>Nuit à partir de 25€</p>
-                            </div>
+                            <h3>Auberge la Cannebière</h3>
+                            <p>Nuit à partir de 25€</p>
                     </div>
-                    <div class="card">
+                    <div>
                         <img src="design/images/hebergements/desktop/HotelDuPort.jpg" alt="Hotel du Port">
-                            <div class="cardcontainer">
                                 <h3>Hôtel du port</h3>
                                 <p>Nuit à partir de 52€</p>
-                            </div>
                     </div>
-                    <div class="card">
+                    <div>
                         <img src="design/images/hebergements/desktop/HotelLesMouettes.jpg" alt="Hotel les Mouettes">
-                            <div class="cardcontainer">
                                 <h3>Hôtel Les mouettes</h3>
                                 <p>Nuit à partir de 76€</p>
-                            </div>
                     </div>
-                    <div class="card">
+                    <div>
                         <img src="design/images/hebergements/desktop/HotelDeLaMer.jpg" alt="Hotel de la Mer">
-                            <div class="cardcontainer">
                                 <h3>Hôtel de la mer</h3>
                                 <p>Nuit à partir de 46€</p>
-                            </div>
                     </div>
-                    <div class="card">
+                    <div>
                         <img src="design/images/hebergements/desktop/AubergeLePanier.jpg" alt="Auberge Le Panier">
-                            <div class="cardcontainer">
                                 <h3>Auberge Le Panier</h3>
                                 <p>Nuit à partir de 23€</p>
-                            </div>
                     </div>
-                    <div class="card">
+                    <div>
                         <img src="design/images/hebergements/desktop/HotelChezAmina.jpg" alt="Hotel Chez Amina">
-                            <div class="cardcontainer">
                                 <h3>Hôtel chez Amina</h3>
                                 <p>Nuit à partir de 90€</p>
-                            </div>
                     </div>
                 </div> 
                 <h3>Afficher plus</h3>
         </div>
-        <aside>
-            <div id="Popular">
+        <aside id="Popular">
                 <h2>Les plus populaires</h2>
-                    <div class="flex-container">
-                        <div class="card">
+                    <div class="CardsPopular">
+                        <div>
                             <img src="design/images/hebergements/desktop/HotelLeSoleilDuMatin.jpg" alt="Hotel Le Soleil du Matin">
-                                <div class="cardcontainer">
                                     <h3>Hôtel Le soleil du matin</h3>
                                     <p>Nuit à partir de 128€</p>
-                                </div>
                         </div>
-                        <div class="card">
+                        <div>
                             <img src="design/images/hebergements/desktop/AuCoeurDeLeauChambresDhotes.jpg" alt="Au Coeur de l'Eau - Chambres d'hotes">
-                                <div class="cardcontainer">
                                     <h3>Au coeur de l'eau<br />Chambres d'hôtes</h3>
                                     <p>Nuit à partir de 71€</p>
-                                </div>
                         </div>
-                        <div class="card">
+                        <div>
                             <img src="design/images/hebergements/desktop/HotelToutBleuEtBlanc.jpg" alt="Hotel tout Bleu et blanc">
-                                <div class="cardcontainer">
                                     <h3>Hôtel Tout bleu et Blanc</h3>
                                     <p>Nuit à partir de 68€</p>
-                                </div>
                         </div>
                     </div>
-            </div>
         </aside>
     </section>
 <!-- SECTION RESULTATS ACTIVITES -->
-    <!-- VOIR : https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout et https://css-tricks.com/best-way-implement-wrapper-css/ et https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox-->
     <section id="Activities">
         <h2>Activités à Marseille</h2>
-        <div class="wrapper">
-            <div class="One">
-                <div class="card">
-                    <img src="design/images/activites/desktop/VieuxPort.jpg" alt="Vieux Port">
-                        <div class="cardcontainer">
-                            <h3>Vieux Port</h3>
-                        </div>
-                </div>
+        <div class="CardsActivities">
+            <div>
+                <img src="design/images/activites/desktop/VieuxPort.jpg" alt="Vieux Port">
+                    <h3>Vieux Port</h3>
             </div>
-            <div class="OneFromTwo">
-                <div class="card">
-                    <img src="design/images/activites/desktop/FortDePomegues.jpg" alt="Fort de Pomegues">
-                        <div class="cardcontainer">
-                            <h3>Fort de Pomègues</h3>
-                        </div>
-                </div>
+            <div>
+                <img src="design/images/activites/desktop/FortDePomegues.jpg" alt="Fort de Pomegues">
+                    <h3>Fort de Pomègues</h3>
             </div>
-            <div class="TwoFromTwo">
-                <div class="card">
-                    <img src="design/images/activites/desktop/IlesDuFrioul.jpg" alt="Iles du Frioul">
-                        <div class="cardcontainer">
-                            <h3>Iles du Frioul</h3>
-                        </div>
-                </div>
+            <div>
+                <img src="design/images/activites/desktop/IlesDuFrioul.jpg" alt="Iles du Frioul">
+                    <h3>Iles du Frioul</h3>
             </div>
-            <div class="Three">
-                <div class="card">
-                    <img src="design/images/activites/desktop/ParcNationalDesCalanques.jpg" alt="Parc national des Calanques">
-                        <div class="cardcontainer">
-                            <h3>Parc National des Calanques</h3>
-                        </div>
-                </div>
+            <div>
+                <img src="design/images/activites/desktop/ParcNationalDesCalanques.jpg" alt="Parc national des Calanques">
+                    <h3>Parc National des Calanques</h3>
             </div>
-            <div class="OneFromFour">
-                <div class="card">
-                    <img src="design/images/activites/desktop/NotreDameDeLaGarde.jpg" alt="Notre Dame de La Garde">
-                        <div class="cardcontainer">
-                            <h3>Notre-Dame-de-la-Garde</h3>
-                        </div>
-                </div>
+            <div>
+                <img src="design/images/activites/desktop/NotreDameDeLaGarde.jpg" alt="Notre Dame de La Garde">
+                    <h3>Notre-Dame-de-la-Garde</h3>
             </div>
-            <div class="TwoFromFour">
-                <div class="card">
-                    <img src="design/images/activites/desktop/ParcLongchamp.jpg" alt="Parc Longchamp">
-                        <div class="cardcontainer">
-                            <h3>Parc Longchamp</h3>
-                        </div>
-                </div>
+            <div>
+                <img src="design/images/activites/desktop/ParcLongchamp.jpg" alt="Parc Longchamp">
+                    <h3>Parc Longchamp</h3>
             </div>
         </div>
     </section>

@@ -6,9 +6,11 @@
 }
 h1{
     font-size: 1.6em;
+    font-weight: bold;
 }
 #maincontainer{
     margin: 0% 0% 2% 3%;
+    width: 95%;
 }
 
 /* HEADER */
@@ -19,12 +21,12 @@ header .logoetnav{
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-    padding: 3% 0% 2% 3%;
-    width: 80%;
+    padding: 0% 0% 0% 3%;
+    width: 95%;
     text-align:center;
 }
 header .slogan{
-    padding: 0% 0% 2% 3%;
+    padding: 0% 0% 1% 3%;
     width: 80%;
 }
 header .slogan h4{
@@ -33,9 +35,8 @@ header .slogan h4{
 
 /* NAVBAR */
 nav li{
-    display: inline-block;
-    list-style: none;
-    justify-content: space-around;
+    display: inline-flex;
+    flex-flow: row wrap;
 } 
 nav li a{
     padding: 2.5em 1em;
@@ -44,7 +45,7 @@ nav li a{
 }
 nav .nav-anchor a:hover{
     color:  #0065FC;
-    border-top: 3px solid #0065fc;
+    border-top: 2px solid #0065fc;
 }
 nav .nav-link a{
     color: #0065FC;
@@ -52,16 +53,61 @@ nav .nav-link a{
 }
 
 /* SEARCH */
+#Search{
+    padding-bottom: 20px;
+}
 .formmapsearch{
     display: flex;
     flex-direction: row;
-    height: 40px;
+    height: 45px;
+    padding-bottom: 20px;
+}
+input[type="search"].inputmapsearch::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-weight: bold;
+    text-align: center;
+}
+input[type="search"].inputmapsearch::-moz-placeholder { /* Firefox 19+ */
+    font-weight: bold;
+    text-align: center;
+}
+input[type="search"].inputmapsearch:-ms-input-placeholder { /* IE 10+ */
+    font-weight: bold;
+    text-align: center;
+}
+input[type="search"].inputmapsearch:-moz-placeholder { /* Firefox 18- */
+    font-weight: bold;
+    text-align: center;
 }
 .fa-map-marker-alt{
     background-color: #F2F2F2;
-    padding: 10px 15px;
+    padding: 15px 20px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+}
+.ResultsNumber{
+    padding-top: 20px;
+    display: flex;
+}
+.fa-info{
+    color: #0065FC;
+    border: 2px solid #F2F2F2;
+    border-radius: 15px;
+    padding: 2.5px 2.5px;
+    width: 15px;
+    height: 15px;
+    display:inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.inputmapsearch{
+    width: 160px;
+    border-color: #F2F2F2;
+    border-style: solid;
 }
 .btnmapsearch{
     background-color: #0065fc;
@@ -71,12 +117,85 @@ nav .nav-link a{
     padding: 10px;
     color: #fff;
     font-weight: bold;
+    width: 120px;
 }
 .btnmapsearch:hover{
     cursor: pointer;
 }
+.formfilter{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    vertical-align: bottom;
+    line-height: 50px;
+}
+.formfilter input[type=checkbox] {
+    display: none;
+}
+.formfilter .spancustomlabel {
+    display: inline-flex;
+    border: 2px solid #F2F2F2;
+    border-radius: 20px;
+    vertical-align:center;
+    line-height: 40px;
+    height: 40px;
 
-
+}
+.formfilter .spancustomlabel:hover{
+    color: #DEEBFF;
+    background-color: #0065FC;
+    cursor: pointer;
+    border: none;
+}
+.formfilter input[type=checkbox]:checked + .spancustomlabel {
+    background: #0065FC;
+    color: #fff;
+}
+.formfilter .spancustomlabel i.fas{
+    color: #0065FC;
+    background-color: #DEEBFF;
+    width: 40px;
+    height: 40px;
+    display:inline-block;
+    text-align: center;
+    vertical-align: bottom;
+    line-height: 40px;
+    border-radius: 20px;
+}
+.formfilter .spancustomlabel h4{
+    font-size: 0.9em;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* RESULTS */
+#Results{
+    display: flex;
+}
+/* RENTALS */
+#Rentals{
+    background-color: yellow;
+}
+#Rentals .CardsRental img{
+    width: 30%;
+}
+#Rentals .CardsRental div:nth-child(odd) {
+    background-color: lime;
+}
+/* MOST POPULAR */
+#Popular{
+    background-color: violet;
+}
+#Popular .CardsPopular img{
+    width: 30%;
+}
+/* ACTIVITIES */
+#Activities{
+    background-color:orange;
+}
+#Activities .CardsActivities img{
+    width: 30%;
+}
 /* FOOTER */
 footer{
 	background-color: #F2F2F2;
@@ -89,11 +208,6 @@ footer{
     justify-content:space-between;
     padding: 2% 0% 2% 3%;
 }
-/*
-.footertxt:nth-child(1n+0){
-    color: blue;
-}
-*/
 .footertxt li{
     list-style: none;
     line-height: 2;
