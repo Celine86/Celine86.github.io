@@ -42,6 +42,7 @@ nav li a{
     padding: 2.5em 1em;
     text-decoration: none;
     color: rgba(0,0,0, 0.75);
+    border-top: 2px solid rgba(0, 0, 0, 0);
 }
 nav .nav-anchor a:hover{
     color:  #0065FC;
@@ -127,31 +128,31 @@ input[type="search"].inputmapsearch:-moz-placeholder { /* Firefox 18- */
     justify-content: space-between;
     width: 60%;
     vertical-align: bottom;
-    line-height: 50px;
+    line-height: 40px;
 }
 .formfilter input[type=checkbox] {
     display: none;
 }
-.formfilter .spancustomlabel {
+.formfilter .divcustomlabel {
     display: inline-flex;
     border: 2px solid #F2F2F2;
-    border-radius: 20px;
+    border-radius: 25px;
     vertical-align:center;
     line-height: 40px;
     height: 40px;
-
 }
-.formfilter .spancustomlabel:hover{
+.formfilter .divcustomlabel:hover{
     color: #DEEBFF;
     background-color: #0065FC;
     cursor: pointer;
     border: none;
 }
-.formfilter input[type=checkbox]:checked + .spancustomlabel {
+.formfilter input[type=checkbox]:checked + .divcustomlabel {
     background: #0065FC;
     color: #fff;
+    border: none;
 }
-.formfilter .spancustomlabel i.fas{
+.formfilter .divcustomlabel i.fas{
     color: #0065FC;
     background-color: #DEEBFF;
     width: 40px;
@@ -162,12 +163,14 @@ input[type="search"].inputmapsearch:-moz-placeholder { /* Firefox 18- */
     line-height: 40px;
     border-radius: 20px;
 }
-.formfilter .spancustomlabel h4{
+.formfilter .divcustomlabel h4{
     font-size: 0.9em;
     display: inline;
     margin-left: 10px;
     margin-right: 10px;
 }
+
+
 /* RESULTS */
 #Results{
     display: flex;
