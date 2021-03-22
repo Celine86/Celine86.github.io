@@ -63,19 +63,7 @@ nav .nav-link a{
     height: 45px;
     padding-bottom: 20px;
 }
-input[type="search"].inputmapsearch::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    font-weight: bold;
-    text-align: center;
-}
-input[type="search"].inputmapsearch::-moz-placeholder { /* Firefox 19+ */
-    font-weight: bold;
-    text-align: center;
-}
-input[type="search"].inputmapsearch:-ms-input-placeholder { /* IE 10+ */
-    font-weight: bold;
-    text-align: center;
-}
-input[type="search"].inputmapsearch:-moz-placeholder { /* Firefox 18- */
+input[type="search"].inputmapsearch::placeholder {
     font-weight: bold;
     text-align: center;
 }
@@ -91,6 +79,11 @@ input[type="search"].inputmapsearch:-moz-placeholder { /* Firefox 18- */
 .ResultsNumber{
     padding-top: 20px;
     display: flex;
+    align-items: center;
+}
+.ResultsNumber h4{
+    font-weight:lighter;
+    color: rgba(0,0,0, 0.75);
 }
 .fa-info{
     color: #0065FC;
@@ -101,9 +94,9 @@ input[type="search"].inputmapsearch:-moz-placeholder { /* Firefox 18- */
     height: 15px;
     display:inline-block;
     text-align: center;
-    vertical-align: middle;
     font-size: 12px;
     margin-right: 10px;
+    vertical-align: middle;
 }
 .inputmapsearch{
     width: 160px;
