@@ -8,28 +8,28 @@ h1{
     font-size: 1.6em;
     font-weight: bold;
 }
-#maincontainer{
-    margin: 0% 0% 2% 3%;
+header{
     width: 95%;
+    max-width: auto;
+    margin: 0 2% 0 2%;
+}
+#maincontainer{
+    width: 95%;
+    max-width: auto;
+    margin: 0 2% 0 2%;
 }
 
 /* HEADER */
-header{
-    width: 100%;
-}
-header .logoetnav{
+#logoetnav{
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-    padding: 0% 0% 0% 3%;
-    width: 95%;
     text-align:center;
 }
-header .slogan{
-    padding: 0% 0% 1% 3%;
-    width: 80%;
+#slogan{
+    padding-bottom: 20px;
 }
-header .slogan h4{
+#slogan h4{
     font-weight: normal;
 }
 
@@ -163,35 +163,193 @@ input[type="search"].inputmapsearch::placeholder {
     margin-right: 10px;
 }
 
+/* Stars */
+/* .fa-star .fa-blue{
+    color: #0065FC;
+}
+.fa-star .grey{
+    color: #F2F2F2;
+}*/
+
 
 /* RESULTS */
 #Results{
     display: flex;
+    padding-bottom: 20px;
 }
+
 /* RENTALS */
 #Rentals{
-    background-color: yellow;
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    padding: 30px 30px;
+    margin-right: auto;
 }
-#Rentals .CardsRental img{
-    width: 30%;
+#Rentals #ResultsRentals{
+    padding-bottom: 15px;
 }
-#Rentals .CardsRental div:nth-child(odd) {
-    background-color: lime;
+#Rentals #More{
+    padding-top: 15px;
+}
+#Rentals .CardsRentalFirstRow, .CardsRentalSecondRow{
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 0px 30px;
+    padding: 15px 0px;
+}
+#Rentals .CardsRentalFirstRow div, .CardsRentalSecondRow div{
+    background-color: #fff;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    padding: 5px 5px;
+}
+#Rentals .CardsRentalFirstRow img, .CardsRentalSecondRow img{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-fit: cover;
+    height: 140px;
+    width: 240px;
+}
+#Rentals .CardsRentalFirstRow h3, .CardsRentalSecondRow h3{
+    padding-left: 10px;
+}    
+#Rentals .CardsRentalFirstRow p, .CardsRentalSecondRow p{
+    padding-left: 10px;
+}  
+#Rentals .CardsRentalFirstRow span, .CardsRentalSecondRow span{
+    font-weight: bold;
+}
+.fa-star{
+    font-size: 12px;
+}
+#Rentals .CardsRentalFirstRow .stars, .CardsRentalSecondRow .stars{
+    display: inherit;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+#Rentals .CardsRentalFirstRow a, .CardsRentalSecondRow a{
+    text-decoration: none;
+    color: #000 !important;
+}
+#Rentals .CardsRentalFirstRow a:hover, .CardsRentalSecondRow a:hover{
+    text-decoration: none;
+    color: #000 !important;
 }
 /* MOST POPULAR */
+.MostPopular{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.MostPopular .fa-chart-line{
+    float: right;
+    font-size: 1.5em;
+}
 #Popular{
-    background-color: violet;
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    padding: 30px 30px;
+    margin-left: 2%;
+}
+#Popular .CardsPopular{
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+#Popular .CardsPopular div:nth-child(1n){
+    background-color: #FFF;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    padding: 5px 25px 5px 5px;
+    margin-bottom: 20px;
 }
 #Popular .CardsPopular img{
-    width: 30%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    object-fit: cover;
+    height: 140px;
+    width: 160px;
+    float: left;
+    margin-right: 10px;
 }
+#Popular .CardsPopular h3{
+    margin-top: 4%;
+    display: flex;
+}
+#Popular .CardsPopular p{
+    display: flex;
+}
+#Popular .CardsPopular .stars{
+    display: inherit;
+    padding-top: 12%;
+}
+#Popular .CardsPopular a{
+    text-decoration: none;
+    color: #000 !important;
+}
+#Popular .CardsPopular a:hover{
+    text-decoration: none;
+    color: #000 !important;
+}
+#Popular h2{
+    position: relative;
+    display: flex;
+}
+
 /* ACTIVITIES */
-#Activities{
-    background-color:orange;
+#Activities .CardsActivities{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1% 0% 2% 0%;
 }
-#Activities .CardsActivities img{
-    width: 30%;
+#Activities .CardsActivities h3{
+    margin-left: 10px;
 }
+#Activities .CardsActivities a{
+    text-decoration: none;
+    color: #000;
+}
+#Activities .CardsActivities a:hover{
+    text-decoration: none;
+    color: #000;
+}
+#Activities .CardsActivities .OneActivity{
+    padding-bottom: 20px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    width: 278px;
+    height: 380px;
+    border: 1px solid #fff;
+}
+#Activities .CardsActivities .OneActivity img{
+    object-fit: cover;
+    height: 350px;
+    width: 280px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-bottom: 20px;
+}
+#Activities .CardsActivities .TwoActivities{
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    width: 278px;
+    border: 1px solid #fff;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+#Activities .CardsActivities .TwoActivities img{
+    object-fit: cover;
+    height: 130px;
+    width: 280px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-bottom: 20px;
+}
+
+
 /* FOOTER */
 footer{
 	background-color: #F2F2F2;
@@ -202,7 +360,8 @@ footer{
     display: flex;
     width: 70%;
     justify-content:space-between;
-    padding: 2% 0% 2% 3%;
+    margin: 0 2% 0 2%;
+    padding: 30px;
 }
 .footertxt li{
     list-style: none;
@@ -218,3 +377,5 @@ footer{
 .footertxt a:hover{
     text-decoration: underline;
 }
+
+
