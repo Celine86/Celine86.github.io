@@ -126,6 +126,45 @@ input[type="search"].inputmapsearch::placeholder {
 .formfilter input[type=checkbox] {
     display: none;
 }
+/*
+.formfilter .customlabel {
+    display: inline-flex;
+    border: 2px solid #F2F2F2;
+    border-radius: 25px;
+    vertical-align:center;
+    line-height: 40px;
+    height: 40px;
+}
+.formfilter .customlabel:hover{
+    color: #DEEBFF;
+    background-color: #0065FC;
+    cursor: pointer;
+    border: none;
+}
+.formfilter input[type=checkbox]:checked + .customlabel {
+    background: #0065FC;
+    color: #fff;
+    border: none;
+}
+.formfilter .customlabel i.fas{
+    color: #0065FC;
+    background-color: #DEEBFF;
+    width: 40px;
+    height: 40px;
+    display:inline-block;
+    text-align: center;
+    vertical-align: bottom;
+    line-height: 40px;
+    border-radius: 20px;
+}
+.formfilter .customlabel {
+    font-size: 0.9em;
+    display: inline;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+*/
 .formfilter .divcustomlabel {
     display: inline-flex;
     border: 2px solid #F2F2F2;
