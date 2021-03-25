@@ -9,14 +9,16 @@ h1{
     font-weight: bold;
 }
 header{
-    width: 95%;
-    max-width: auto;
-    margin: 0 2% 0 2%;
+    max-width: 1280px;
+    margin: auto;
 }
 #maincontainer{
-    width: 95%;
-    max-width: auto;
-    margin: 0 2% 0 2%;
+    max-width: 1280px;
+    margin: auto;
+}
+#footercontainer{
+    max-width: 1280px;
+    margin: auto;    
 }
 
 /* HEADER */
@@ -126,45 +128,6 @@ input[type="search"].inputmapsearch::placeholder {
 .formfilter input[type=checkbox] {
     display: none;
 }
-/*
-.formfilter .customlabel {
-    display: inline-flex;
-    border: 2px solid #F2F2F2;
-    border-radius: 25px;
-    vertical-align:center;
-    line-height: 40px;
-    height: 40px;
-}
-.formfilter .customlabel:hover{
-    color: #DEEBFF;
-    background-color: #0065FC;
-    cursor: pointer;
-    border: none;
-}
-.formfilter input[type=checkbox]:checked + .customlabel {
-    background: #0065FC;
-    color: #fff;
-    border: none;
-}
-.formfilter .customlabel i.fas{
-    color: #0065FC;
-    background-color: #DEEBFF;
-    width: 40px;
-    height: 40px;
-    display:inline-block;
-    text-align: center;
-    vertical-align: bottom;
-    line-height: 40px;
-    border-radius: 20px;
-}
-.formfilter .customlabel {
-    font-size: 0.9em;
-    display: inline;
-    margin-left: 15px;
-    margin-right: 15px;
-    font-weight: bold;
-}
-*/
 .formfilter .divcustomlabel {
     display: inline-flex;
     border: 2px solid #F2F2F2;
@@ -201,7 +164,6 @@ input[type="search"].inputmapsearch::placeholder {
     margin-left: 10px;
     margin-right: 10px;
 }
-
 /* Stars */
 /* .fa-star .fa-blue{
     color: #0065FC;
@@ -247,8 +209,8 @@ input[type="search"].inputmapsearch::placeholder {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     object-fit: cover;
-    height: 140px;
-    width: 240px;
+    height: 120px;
+    width: 220px;
 }
 #Rentals .CardsRentalFirstRow h3, .CardsRentalSecondRow h3{
     padding-left: 10px;
@@ -273,7 +235,7 @@ input[type="search"].inputmapsearch::placeholder {
 }
 #Rentals .CardsRentalFirstRow a:hover, .CardsRentalSecondRow a:hover{
     text-decoration: none;
-    color: #000 !important;
+    color: #0065fc !important;
 }
 /* MOST POPULAR */
 .MostPopular{
@@ -330,7 +292,7 @@ input[type="search"].inputmapsearch::placeholder {
 }
 #Popular .CardsPopular a:hover{
     text-decoration: none;
-    color: #000 !important;
+    color: #0065fc !important;
 }
 #Popular h2{
     position: relative;
@@ -353,7 +315,7 @@ input[type="search"].inputmapsearch::placeholder {
 }
 #Activities .CardsActivities a:hover{
     text-decoration: none;
-    color: #000;
+    color: #0065fc !important;
 }
 #Activities .CardsActivities .OneActivity{
     padding-bottom: 20px;
@@ -388,7 +350,6 @@ input[type="search"].inputmapsearch::placeholder {
     margin-bottom: 20px;
 }
 
-
 /* FOOTER */
 footer{
 	background-color: #F2F2F2;
@@ -397,10 +358,9 @@ footer{
 }
 .footertxt{
     display: flex;
-    width: 70%;
     justify-content:space-between;
-    margin: 0 2% 0 2%;
-    padding: 30px;
+    padding: 30px 0px;
+    width: 70%;
 }
 .footertxt li{
     list-style: none;
@@ -416,5 +376,25 @@ footer{
 .footertxt a:hover{
     text-decoration: underline;
 }
+
+/* MEDIA QUERIES */
+
+/* Tablets and Small Desktop Screens */
+/*
+@media only screen and (max-width: 1280px) {
+    header{
+        margin: auto;
+    }
+    #maincontainer{
+        margin: auto;
+    }
+    footer{
+        width: 100%;
+        background-color: #d11a1a;
+    }
+}
+*/
+
+/* Phones */ 
 
 
