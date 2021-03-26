@@ -15,6 +15,9 @@ h1{
     font-size: 1.375em;
     font-weight: bold;
 }
+h4{
+    font-size: 1em;
+}
 header{
     max-width: 80rem;
     margin: auto;
@@ -77,13 +80,13 @@ nav .nav-link a{
 }
 input[type="search"].inputmapsearch::placeholder {
     font-weight: bold;
-    text-align: center;
+    font-size: 1.2em;
 }
 .fa-map-marker-alt{
     background-color: #F2F2F2;
     padding: 0.9375rem 1.25rem;
-    border-top-left-radius: 0.625rem;
-    border-bottom-left-radius: 0.625rem;
+    border-top-left-radius: 1rem;  /*0.625rem;*/
+    border-bottom-left-radius: 1rem;  /*0.625rem;*/
     width: 1rem;
     display: inline-block;
     text-align: center;
@@ -117,8 +120,8 @@ input[type="search"].inputmapsearch::placeholder {
 }
 .btnmapsearch{
     background-color: #0065fc;
-    border-top-right-radius: 0.625rem;
-    border-bottom-right-radius: 0.625rem;
+    border-top-right-radius: 1rem;/*0.625rem;*/
+    border-bottom-right-radius: 1rem;/*0.625rem;*/
     border: none;
     padding: 0.625rem;
     color: #fff;
@@ -133,7 +136,7 @@ input[type="search"].inputmapsearch::placeholder {
     justify-content: space-between;
     width: 60%;
     vertical-align: bottom;
-    line-height: 2.5rem;
+    line-height: 3rem; /* 2.5rem; */ 
 }
 .formfilter input[type=checkbox] {
     display: none;
@@ -143,8 +146,8 @@ input[type="search"].inputmapsearch::placeholder {
     border: 0.125rem solid #F2F2F2;
     border-radius: 1.5625rem;
     vertical-align:center;
-    line-height: 2.5rem;
-    height: 2.5rem;
+    line-height: 3rem; /* 2.5rem; */ 
+    height: 3rem; /* 2.5rem; */ 
 }
 .formfilter .divcustomlabel:hover{
     color: #DEEBFF;
@@ -160,13 +163,13 @@ input[type="search"].inputmapsearch::placeholder {
 .formfilter .divcustomlabel i.fas{
     color: #0065FC;
     background-color: #DEEBFF;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem; /* 2.5rem; */
+    height: 3rem; /* 2.5rem; */ 
     display:inline-block;
     text-align: center;
     vertical-align: bottom;
-    line-height: 2.5rem;
-    border-radius: 1.25rem;
+    line-height: 3rem; /* 2.5rem; */ 
+    border-radius: 1.5rem;
 }
 .formfilter .divcustomlabel h4{
     font-size: 0.9em;
