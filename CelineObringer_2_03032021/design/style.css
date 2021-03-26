@@ -1,5 +1,4 @@
 /* GENERAL SETTINGS */ 
-/* Mettre px en em ou rem */
 *{
     margin: 0;
     padding: 0;
@@ -9,21 +8,23 @@
     max-width: 1280px; 
     margin: 0 auto;
     font-family: 'Raleway', sans-serif;
-} */
+} 
+--> Retire le width 100% du Footer
+*/
 h1{
-    font-size: 1.6em;
+    font-size: 1.375em;
     font-weight: bold;
 }
 header{
-    max-width: 1280px;
+    max-width: 80rem;
     margin: auto;
 }
 #maincontainer{
-    max-width: 1280px;
+    max-width: 80rem;
     margin: auto;
 }
 #footercontainer{
-    max-width: 1280px;
+    max-width: 80rem;
     margin: auto;    
 }
 
@@ -31,30 +32,33 @@ header{
 #logoetnav{
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
-    text-align:center;
+    justify-content: space-between;
+    text-align: center;
 }
 #slogan{
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
 }
 #slogan h4{
     font-weight: normal;
 }
-
 /* NAVBAR */
+/* nav ul{
+    display: flex;
+    justify-content: space-around;
+    float: right;
+} */
 nav li{
     display: inline-flex;
-    flex-flow: row wrap;
 } 
 nav li a{
     padding: 2.5em 1em;
     text-decoration: none;
     color: rgba(0,0,0, 0.75);
-    border-top: 2px solid rgba(0, 0, 0, 0);
+    border-top: 0.125rem solid rgba(0, 0, 0, 0);
 }
 nav .nav-anchor a:hover{
     color:  #0065FC;
-    border-top: 2px solid #0065fc;
+    border-top: 0.125rem solid #0065fc;
 }
 nav .nav-link a{
     color: #0065FC;
@@ -63,13 +67,13 @@ nav .nav-link a{
 
 /* SEARCH */
 #Search{
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
 }
 .formmapsearch{
     display: flex;
     flex-direction: row;
-    height: 45px;
-    padding-bottom: 20px;
+    height: 3.15rem;
+    padding-bottom: 1.25rem;
 }
 input[type="search"].inputmapsearch::placeholder {
     font-weight: bold;
@@ -77,15 +81,15 @@ input[type="search"].inputmapsearch::placeholder {
 }
 .fa-map-marker-alt{
     background-color: #F2F2F2;
-    padding: 15px 20px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    width: 30px;
+    padding: 0.9375rem 1.25rem;
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
+    width: 1rem;
     display: inline-block;
     text-align: center;
 }
 .ResultsNumber{
-    padding-top: 20px;
+    padding-top: 1.25rem;
     display: flex;
     align-items: center;
 }
@@ -95,31 +99,31 @@ input[type="search"].inputmapsearch::placeholder {
 }
 .fa-info{
     color: #0065FC;
-    border: 2px solid #F2F2F2;
-    border-radius: 15px;
-    padding: 2.5px 2.5px;
-    width: 15px;
-    height: 15px;
+    border: 0.125rem solid #F2F2F2;
+    border-radius: 0.9375rem;
+    padding: 0.15625rem 0.15625rem;
+    width: 0.9375rem;
+    height: 0.9375rem;
     display:inline-block;
     text-align: center;
-    font-size: 12px;
-    margin-right: 10px;
+    font-size:  0.75em;
+    margin-right: 0.625rem;
     vertical-align: middle;
 }
 .inputmapsearch{
-    width: 160px;
+    width: 15rem;
     border-color: #F2F2F2;
     border-style: solid;
 }
 .btnmapsearch{
     background-color: #0065fc;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
     border: none;
-    padding: 10px;
+    padding: 0.625rem;
     color: #fff;
     font-weight: bold;
-    width: 120px;
+    width: 8rem;
 }
 .btnmapsearch:hover{
     cursor: pointer;
@@ -129,18 +133,18 @@ input[type="search"].inputmapsearch::placeholder {
     justify-content: space-between;
     width: 60%;
     vertical-align: bottom;
-    line-height: 40px;
+    line-height: 2.5rem;
 }
 .formfilter input[type=checkbox] {
     display: none;
 }
 .formfilter .divcustomlabel {
     display: inline-flex;
-    border: 2px solid #F2F2F2;
-    border-radius: 25px;
+    border: 0.125rem solid #F2F2F2;
+    border-radius: 1.5625rem;
     vertical-align:center;
-    line-height: 40px;
-    height: 40px;
+    line-height: 2.5rem;
+    height: 2.5rem;
 }
 .formfilter .divcustomlabel:hover{
     color: #DEEBFF;
@@ -156,19 +160,19 @@ input[type="search"].inputmapsearch::placeholder {
 .formfilter .divcustomlabel i.fas{
     color: #0065FC;
     background-color: #DEEBFF;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     display:inline-block;
     text-align: center;
     vertical-align: bottom;
-    line-height: 40px;
-    border-radius: 20px;
+    line-height: 2.5rem;
+    border-radius: 1.25rem;
 }
 .formfilter .divcustomlabel h4{
     font-size: 0.9em;
     display: inline;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
 }
 /* Stars */
 /* .fa-star .fa-blue{
@@ -182,58 +186,58 @@ input[type="search"].inputmapsearch::placeholder {
 /* RESULTS */
 #Results{
     display: flex;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
 }
 
 /* RENTALS */
 #Rentals{
     background-color: #F2F2F2;
-    border-radius: 25px;
-    padding: 30px 30px;
+    border-radius: 1.5625rem;
+    padding: 1.875rem 1.875rem;
     margin-right: auto;
 }
 #Rentals #ResultsRentals{
-    padding-bottom: 15px;
+    padding-bottom: 0.9375rem;
 }
 #Rentals #More{
-    padding-top: 15px;
+    padding-top: 0.9375rem;
 }
 #Rentals .CardsRentalFirstRow, .CardsRentalSecondRow{
-    padding: 0px 0px;
+    padding: 0rem 0rem;
     display: flex;
     flex-direction: row;
-    gap: 0px 30px;
-    padding: 15px 0px;
+    gap: 0rem 1.875rem;
+    padding: 0.9375rem 0rem;
 }
 #Rentals .CardsRentalFirstRow div, .CardsRentalSecondRow div{
     background-color: #fff;
-    box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
-    border-radius: 25px;
-    padding: 5px 5px;
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
+    border-radius: 1.5625rem;
+    padding: 0.3125em 0.3125em;
 }
 #Rentals .CardsRentalFirstRow img, .CardsRentalSecondRow img{
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-top-left-radius: 1.5625rem;
+    border-top-right-radius: 1.5625rem;
     object-fit: cover;
-    height: 120px;
-    width: 220px;
+    height: 7.55rem;
+    width: 14.55rem;
 }
 #Rentals .CardsRentalFirstRow h3, .CardsRentalSecondRow h3{
-    padding-left: 10px;
+    padding-left: 0.625rem;
 }    
 #Rentals .CardsRentalFirstRow p, .CardsRentalSecondRow p{
-    padding-left: 10px;
+    padding-left: 0.625rem;
 }  
 #Rentals .CardsRentalFirstRow span, .CardsRentalSecondRow span{
     font-weight: bold;
 }
 .fa-star{
-    font-size: 12px;
+    font-size:  0.75em;
 }
 #Rentals .CardsRentalFirstRow .stars, .CardsRentalSecondRow .stars{
     display: inherit;
-    margin-top: 5px;
-    padding-left: 10px;
+    margin-top: 0.3125em;
+    padding-left: 0.625rem;
 }
 #Rentals .CardsRentalFirstRow a, .CardsRentalSecondRow a{
     text-decoration: none;
@@ -255,31 +259,31 @@ input[type="search"].inputmapsearch::placeholder {
 }
 #Popular{
     background-color: #F2F2F2;
-    border-radius: 25px;
-    padding: 30px 30px;
+    border-radius: 1.5625rem;
+    padding: 1.875rem 1.875rem;
     margin-left: 2%;
 }
 #Popular .CardsPopular{
-    padding: 30px 0px;
+    padding: 1.875rem 0rem;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 22rem;
 }
 #Popular .CardsPopular div:nth-child(1n){
     background-color: #FFF;
-    box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
-    border-radius: 25px;
-    padding: 5px 25px 5px 5px;
-    margin-bottom: 20px;
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
+    border-radius: 1.5625rem;
+    padding: 0.3125em 1.5625rem 0.3125em 0.3125em;
+    margin-bottom: 1.25rem;
 }
 #Popular .CardsPopular img{
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-top-left-radius: 1.5625rem;
+    border-bottom-left-radius: 1.5625rem;
     object-fit: cover;
-    height: 140px;
-    width: 160px;
+    height: 8.75rem;
+    width: 8.25rem;
     float: left;
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 #Popular .CardsPopular h3{
     margin-top: 4%;
@@ -290,7 +294,8 @@ input[type="search"].inputmapsearch::placeholder {
 }
 #Popular .CardsPopular .stars{
     display: inherit;
-    padding-top: 12%;
+    padding-top: 16%;
+    display: flex;
 }
 #Popular .CardsPopular a{
     text-decoration: none;
@@ -313,7 +318,7 @@ input[type="search"].inputmapsearch::placeholder {
     margin: 1% 0% 2% 0%;
 }
 #Activities .CardsActivities h3{
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
 #Activities .CardsActivities a{
     text-decoration: none;
@@ -324,36 +329,84 @@ input[type="search"].inputmapsearch::placeholder {
     color: #0065fc !important;
 }
 #Activities .CardsActivities .OneActivity{
-    padding-bottom: 20px;
-    box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
-    border-radius: 25px;
-    width: 278px;
-    height: 380px;
-    border: 1px solid #fff;
+    padding-bottom: 1.25rem;
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
+    border-radius: 1.5625rem;
+    width: 18.875rem;
+    height: 26.85rem;
+    border: 0.0625rem solid #fff;
 }
 #Activities .CardsActivities .OneActivity img{
     object-fit: cover;
-    height: 350px;
-    width: 280px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    margin-bottom: 20px;
+    height: 23.975rem;
+    width: 19rem;
+    border-top-left-radius: 1.5625rem;
+    border-top-right-radius: 1.5625rem;
+    margin-bottom: 1.25rem;
 }
-#Activities .CardsActivities .TwoActivities{
-    box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
-    border-radius: 25px;
-    width: 278px;
-    border: 1px solid #fff;
-    margin-bottom: 30px;
-    padding-bottom: 10px;
+#Activities .CardsActivities .ActivitieFortDePomegues{
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
+    border-radius: 1.5625rem;
+    width: 18.875rem;
+    border: 0.0625rem solid #fff;
+    margin-bottom: 1.875rem;
+    padding-bottom: 0.625rem;    
 }
-#Activities .CardsActivities .TwoActivities img{
+#Activities .CardsActivities .ActivitieFortDePomegues img{
     object-fit: cover;
-    height: 130px;
-    width: 280px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    margin-bottom: 20px;
+    height: 12rem;
+    width: 19rem;
+    border-top-left-radius: 1.5625rem;
+    border-top-right-radius: 1.5625rem;
+    margin-bottom: 1.25rem;
+}
+#Activities .CardsActivities .ActivitieIleDuFrioul{
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
+    border-radius: 1.5625rem;
+    width: 18.875rem;
+    border: 0.0625rem solid #fff;
+    margin-bottom: 1.875rem;
+    padding-bottom: 0.625rem;    
+}
+#Activities .CardsActivities .ActivitieIleDuFrioul img{
+    object-fit: cover;
+    height: 7.150rem;
+    width: 19rem;
+    border-top-left-radius: 1.5625rem;
+    border-top-right-radius: 1.5625rem;
+    margin-bottom: 1.25rem;
+}
+#Activities .CardsActivities .ActivitieNotreDameDeLaGarde{
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
+    border-radius: 1.5625rem;
+    width: 18.875rem;
+    border: 0.0625rem solid #fff;
+    margin-bottom: 1.875rem;
+    padding-bottom: 0.625rem;
+}
+#Activities .CardsActivities .ActivitieNotreDameDeLaGarde img{
+    object-fit: cover;
+    height: 9.15rem;
+    width: 19rem;
+    border-top-left-radius: 1.5625rem;
+    border-top-right-radius: 1.5625rem;
+    margin-bottom: 1.25rem;
+}
+#Activities .CardsActivities .ActivitieParcLongchamp{
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
+    border-radius: 1.5625rem;
+    width: 18.875rem;
+    border: 0.0625rem solid #fff;
+    margin-bottom: 1.875rem;
+    padding-bottom: 0.625rem;
+}
+#Activities .CardsActivities .ActivitieParcLongchamp img{
+    object-fit: cover;
+    height: 9.90rem;
+    width: 19rem;
+    border-top-left-radius: 1.5625rem;
+    border-top-right-radius: 1.5625rem;
+    margin-bottom: 1.25rem;
 }
 
 /* FOOTER */
@@ -365,7 +418,7 @@ footer{
 .footertxt{
     display: flex;
     justify-content:space-between;
-    padding: 30px 0px;
+    padding: 1.875rem 0rem;
     width: 70%;
 }
 .footertxt li{
