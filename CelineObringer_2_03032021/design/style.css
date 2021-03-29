@@ -19,24 +19,26 @@ h4{
     font-size: 1em;
 }
 header{
-    max-width: 80rem;
+    max-width: 1280px;
     margin: auto;
 }
 #maincontainer{
-    max-width: 80rem;
+    max-width: 1280px;
     margin: auto;
 }
 #footercontainer{
-    max-width: 80rem;
+    max-width: 1280px;
     margin: auto;    
 }
-
 /* HEADER */
 #logoetnav{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    text-align: center;
+}
+#logo{
+    display: flex;
 }
 #slogan{
     padding-bottom: 1.25rem;
@@ -45,29 +47,37 @@ header{
     font-weight: normal;
 }
 /* NAVBAR */
-/* nav ul{
+nav.nav-anchor{
     display: flex;
-    justify-content: space-around;
-    float: right;
-} */
-nav li{
-    display: inline-flex;
-} 
-nav li a{
-    padding: 2.5em 1em;
+    justify-content: flex-end;
+    width: 82%;
+}
+nav.nav-anchor a{
     text-decoration: none;
     color: rgba(0,0,0, 0.75);
+    padding: 2.5em 1em;
     border-top: 0.125rem solid rgba(0, 0, 0, 0);
 }
-nav .nav-anchor a:hover{
-    color:  #0065FC;
-    border-top: 0.125rem solid #0065fc;
+nav.nav-anchor a:hover{
+    text-decoration: none;
+    color: #0065FC;
+    padding: 2.5em 1em;
+    border-top: 0.125rem solid #0065FC;
 }
-nav .nav-link a{
+nav.nav-anchor a.active{
+    text-decoration: none;
+    color: #0065FC;
+    padding: 2.5em 1em;
+    border-top: 0.125rem solid #0065FC;
+}
+a.subscribe{
     color: #0065FC;
     font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    padding: 2.5em 1em;
+    border-top: 0.125rem solid rgba(0, 0, 0, 0);
 }
-
 /* SEARCH */
 #Search{
     padding-bottom: 1.25rem;
@@ -85,8 +95,8 @@ input[type="search"].inputmapsearch::placeholder {
 .fa-map-marker-alt{
     background-color: #F2F2F2;
     padding: 0.9375rem 1.25rem;
-    border-top-left-radius: 1rem;  /*0.625rem;*/
-    border-bottom-left-radius: 1rem;  /*0.625rem;*/
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
     width: 1rem;
     display: inline-block;
     text-align: center;
@@ -120,8 +130,8 @@ input[type="search"].inputmapsearch::placeholder {
 }
 .btnmapsearch{
     background-color: #0065fc;
-    border-top-right-radius: 1rem;/*0.625rem;*/
-    border-bottom-right-radius: 1rem;/*0.625rem;*/
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     border: none;
     padding: 0.625rem;
     color: #fff;
@@ -131,12 +141,21 @@ input[type="search"].inputmapsearch::placeholder {
 .btnmapsearch:hover{
     cursor: pointer;
 }
+.divformfilter{
+    display: flex;
+    line-height: 3rem;
+    justify-items: flex-start;
+}
+.divformfilter h4{
+    margin-right: 1rem;
+}
 .formfilter{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 60%;
     vertical-align: bottom;
-    line-height: 3rem; /* 2.5rem; */ 
+    line-height: 3rem; 
 }
 .formfilter input[type=checkbox] {
     display: none;
@@ -146,8 +165,8 @@ input[type="search"].inputmapsearch::placeholder {
     border: 0.125rem solid #F2F2F2;
     border-radius: 1.5625rem;
     vertical-align:center;
-    line-height: 3rem; /* 2.5rem; */ 
-    height: 3rem; /* 2.5rem; */ 
+    line-height: 3rem;
+    height: 3rem; 
 }
 .formfilter .divcustomlabel:hover{
     color: #DEEBFF;
@@ -163,12 +182,12 @@ input[type="search"].inputmapsearch::placeholder {
 .formfilter .divcustomlabel i.fas{
     color: #0065FC;
     background-color: #DEEBFF;
-    width: 3rem; /* 2.5rem; */
-    height: 3rem; /* 2.5rem; */ 
+    width: 3rem;
+    height: 3rem;
     display:inline-block;
     text-align: center;
     vertical-align: bottom;
-    line-height: 3rem; /* 2.5rem; */ 
+    line-height: 3rem;
     border-radius: 1.5rem;
 }
 .formfilter .divcustomlabel h4{
@@ -177,21 +196,11 @@ input[type="search"].inputmapsearch::placeholder {
     margin-left: 0.625rem;
     margin-right: 0.625rem;
 }
-/* Stars */
-/* .fa-star .fa-blue{
-    color: #0065FC;
-}
-.fa-star .grey{
-    color: #F2F2F2;
-}*/
-
-
 /* RESULTS */
 #Results{
     display: flex;
     padding-bottom: 1.25rem;
 }
-
 /* RENTALS */
 #Rentals{
     background-color: #F2F2F2;
@@ -238,7 +247,7 @@ input[type="search"].inputmapsearch::placeholder {
     font-size:  0.75em;
 }
 #Rentals .CardsRentalFirstRow .stars, .CardsRentalSecondRow .stars{
-    display: inherit;
+    display: flex;
     margin-top: 0.3125em;
     padding-left: 0.625rem;
 }
@@ -296,7 +305,7 @@ input[type="search"].inputmapsearch::placeholder {
     display: flex;
 }
 #Popular .CardsPopular .stars{
-    display: inherit;
+    display: flex;
     padding-top: 16%;
     display: flex;
 }
@@ -312,7 +321,6 @@ input[type="search"].inputmapsearch::placeholder {
     position: relative;
     display: flex;
 }
-
 /* ACTIVITIES */
 #Activities .CardsActivities{
     display: flex;
@@ -411,7 +419,6 @@ input[type="search"].inputmapsearch::placeholder {
     border-top-right-radius: 1.5625rem;
     margin-bottom: 1.25rem;
 }
-
 /* FOOTER */
 footer{
 	background-color: #F2F2F2;
@@ -439,11 +446,18 @@ footer{
     text-decoration: underline;
 }
 
-/* MEDIA QUERIES */
+/******************/
+/* MEDIA QUERIES  */
+/******************/
 
 /* Tablets and Small Desktop Screens */
 /*
-@media only screen and (max-width: 1280px) {
+@media screen and (min-width: 768px) and (max-width: 1360px) { ...
+}
+*/ 
+
+/* Phones */
+@media screen and (max-width: 768px) {
     header{
         margin: auto;
     }
@@ -452,11 +466,79 @@ footer{
     }
     footer{
         width: 100%;
-        background-color: #d11a1a;
+        background-color: #F2F2F2;
+    }
+    /* NAVBAR */
+    nav.nav-anchor{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        order: 3;
+        padding-bottom: 2em;
+    }
+    nav.nav-anchor a{
+        text-decoration: none;
+        color: rgba(0,0,0, 0.75);
+        padding: 0em 1em 2.5em 1em;
+        border-bottom: 0.125rem solid #F2F2F2;
+        border-top: none;
+        width: 50%;
+        text-align: center;
+    }
+    nav.nav-anchor a:hover{
+        text-decoration: none;
+        color: #0065FC;
+        padding: 0em 1em 2.5em 1em;
+        border-bottom: 0.125rem solid #0065FC;
+        border-top: none;
+        width: max-content;
+        width: 50%;
+        text-align: center;
+
+    }
+    nav.nav-anchor a.active{
+        text-decoration: none;
+        color: #0065FC;
+        padding: 0em 1em 2.5em 1em;
+        border-bottom: 0.125rem solid #0065FC;
+        border-top: none;
+        width: max-content;
+        width: 50%;
+        text-align: center;
+
+    }
+    a.subscribe{
+        color: #0065FC;
+        order: 2;
+    }
+
+    .divformfilter{
+        display: flex;
+        flex-direction: column;
+        line-height: 3rem;
+        justify-content: flex-start;
+    }
+    .divformfilter h4{
+        margin-right: 1rem;
+    }
+    .formfilter{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 60%;
+        vertical-align: bottom;
+        line-height: 3rem; 
+    }
+    .formfilter .divcustomlabel {
+        display: inline-flex;
+        border: 0.125rem solid #F2F2F2;
+        border-radius: 1.5625rem;
+        vertical-align:center;
+        line-height: 3rem;
+        height: 3rem; 
+        margin-bottom: 1rem;
     }
 }
-*/
-
-/* Phones */ 
 
 

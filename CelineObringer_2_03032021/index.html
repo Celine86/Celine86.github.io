@@ -12,22 +12,20 @@
 </head>
 <body>
 <!-- HEADER -->
-    <header> 
-        <div id="logoetnav">
-            <img src="design/images/logo/Reservia.svg" alt="logo">
-            <nav>  
-                <ul>
-                    <li class="nav-anchor"><a href="#Results">Hébergements</a></li>
-                    <li class="nav-anchor"><a href="#Activities">Activités</a></li>
-                    <li class="nav-link"><a href="#">S'inscrire</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div id="slogan">
-            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-                <h4>En plein centre ville ou en pleine nature</h4>
-        </div>
-    </header>
+<header> 
+    <div id="logoetnav">
+        <img src="design/images/logo/Reservia.svg" alt="logo" class="logo">
+        <nav class="nav-anchor">  
+            <a class="active" href="#Results">Hébergements</a>
+            <a href="#Activities">Activités</a>
+        </nav>
+        <a class="subscribe" href="#">S'inscrire</a>
+    </div>
+    <div id="slogan">
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <h4>En plein centre ville ou en pleine nature</h4>
+    </div>
+</header>
 <!-- SECTION RECHERCHE -->
 <div id="maincontainer">
     <section id="Search">
@@ -36,13 +34,15 @@
             <input type="search" placeholder="&emsp;Marseille, France" name="search" class="inputmapsearch">
             <input type="submit" value="Rechercher" class="btnmapsearch">
         </form>
+        <div class="divformfilter">
+        <h4>Filtres</h4>
         <form class="formfilter" method="post" action="#">
-                <h4>Filtres</h4>
                 <input type="checkbox" id="opteco" name="opteco" value="Economique"><div class="divcustomlabel"><i class="fas fa-money-bill-wave"></i><h4><label for="opteco">Economique</label></h4></div>
                 <input type="checkbox" id="optfamilial" name="optfamilial" value="Familial"><div class="divcustomlabel"><i class="fas fa-child"></i><h4><label for="optfamilial">Familial</label></h4></div>
                 <input type="checkbox" id="optromantique" name="optromantique" value="Romantique"><div class="divcustomlabel"><i class="fas fa-heart"></i><h4><label for="optromantique">Romantique</label></h4></div>
                 <input type="checkbox" id="optanimauxok" name="optanimauxok" value="Animauxautorises"><div class="divcustomlabel"><i class="fas fa-dog"></i><h4><label for="optanimauxok">Animaux Autorisés</label></h4></div>
-       </form>
+        </form>
+        </div>
        <div class="ResultsNumber"><i class="fas fa-info"></i><h4>Plus de 500 logements sont disponibles dans cette ville</h4></div>
     </section>
 <!-- SECTION RESULTATS HEBERGEMENTS -->
