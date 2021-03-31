@@ -12,11 +12,11 @@
 --> Retire le width 100% du Footer
 */
 h1{
-    font-size: 1.375em;
+    font-size: 1.375rem;
     font-weight: bold;
 }
 h4{
-    font-size: 1em;
+    font-size: 1rem;
 }
 header{
     max-width: 1280px;
@@ -55,19 +55,19 @@ nav.nav-anchor{
 nav.nav-anchor a{
     text-decoration: none;
     color: rgba(0,0,0, 0.75);
-    padding: 2.5em 1em;
+    padding: 2.5rem 1rem;
     border-top: 0.125rem solid rgba(0, 0, 0, 0);
 }
 nav.nav-anchor a:hover{
     text-decoration: none;
     color: #0065FC;
-    padding: 2.5em 1em;
+    padding: 2.5rem 1rem;
     border-top: 0.125rem solid #0065FC;
 }
 nav.nav-anchor a.active{
     text-decoration: none;
     color: #0065FC;
-    padding: 2.5em 1em;
+    padding: 2.5rem 1rem;
     border-top: 0.125rem solid #0065FC;
 }
 a.subscribe{
@@ -75,7 +75,7 @@ a.subscribe{
     font-weight: bold;
     text-decoration: none;
     display: flex;
-    padding: 2.5em 1em;
+    padding: 2.5rem 1rem;
     border-top: 0.125rem solid rgba(0, 0, 0, 0);
 }
 /* SEARCH */
@@ -90,7 +90,7 @@ a.subscribe{
 }
 input[type="search"].inputmapsearch::placeholder {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 .fa-map-marker-alt{
     background-color: #F2F2F2;
@@ -119,7 +119,7 @@ input[type="search"].inputmapsearch::placeholder {
     height: 0.9375rem;
     display:inline-block;
     text-align: center;
-    font-size:  0.75em;
+    font-size:  0.75rem;
     margin-right: 0.625rem;
     vertical-align: middle;
 }
@@ -191,7 +191,7 @@ input[type="search"].inputmapsearch::placeholder {
     border-radius: 1.5rem;
 }
 .formfilter .divcustomlabel h4{
-    font-size: 0.9em;
+    font-size: 0.9rem;
     display: inline;
     margin-left: 0.625rem;
     margin-right: 0.625rem;
@@ -215,7 +215,6 @@ input[type="search"].inputmapsearch::placeholder {
     padding-top: 0.9375rem;
 }
 #Rentals .CardsRentalFirstRow, .CardsRentalSecondRow{
-    padding: 0rem 0rem;
     display: flex;
     flex-direction: row;
     gap: 0rem 1.875rem;
@@ -225,7 +224,7 @@ input[type="search"].inputmapsearch::placeholder {
     background-color: #fff;
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
     border-radius: 1.5625rem;
-    padding: 0.3125em 0.3125em;
+    padding: 0.3125rem 0.3125rem;
 }
 #Rentals .CardsRentalFirstRow img, .CardsRentalSecondRow img{
     border-top-left-radius: 1.5625rem;
@@ -244,11 +243,11 @@ input[type="search"].inputmapsearch::placeholder {
     font-weight: bold;
 }
 .fa-star{
-    font-size:  0.75em;
+    font-size:  0.75rem;
 }
 #Rentals .CardsRentalFirstRow .stars, .CardsRentalSecondRow .stars{
     display: flex;
-    margin-top: 0.3125em;
+    margin-top: 0.3125rem;
     padding-left: 0.625rem;
 }
 #Rentals .CardsRentalFirstRow a, .CardsRentalSecondRow a{
@@ -267,7 +266,7 @@ input[type="search"].inputmapsearch::placeholder {
 }
 .MostPopular .fa-chart-line{
     float: right;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 #Popular{
     background-color: #F2F2F2;
@@ -281,11 +280,14 @@ input[type="search"].inputmapsearch::placeholder {
     flex-direction: column;
     width: 22rem;
 }
+#Popular .CardsPopular span{
+    font-weight: bold;
+}
 #Popular .CardsPopular div:nth-child(1n){
     background-color: #FFF;
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
     border-radius: 1.5625rem;
-    padding: 0.3125em 1.5625rem 0.3125em 0.3125em;
+    padding: 0.3125rem 1.5625rem 0.3125rem 0.3125rem;
     margin-bottom: 1.25rem;
 }
 #Popular .CardsPopular img{
@@ -339,7 +341,7 @@ input[type="search"].inputmapsearch::placeholder {
     text-decoration: none;
     color: #0065fc !important;
 }
-#Activities .CardsActivities .OneActivity{
+#Activities .CardsActivities .ActivityVieuxPort, .CardsActivities .ActivityParcNationalDesCalanques{
     padding-bottom: 1.25rem;
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
     border-radius: 1.5625rem;
@@ -347,7 +349,7 @@ input[type="search"].inputmapsearch::placeholder {
     height: 26.85rem;
     border: 0.0625rem solid #fff;
 }
-#Activities .CardsActivities .OneActivity img{
+#Activities .CardsActivities .ActivityVieuxPort img, .CardsActivities .ActivityParcNationalDesCalanques img{
     object-fit: cover;
     height: 23.975rem;
     width: 19rem;
@@ -355,7 +357,7 @@ input[type="search"].inputmapsearch::placeholder {
     border-top-right-radius: 1.5625rem;
     margin-bottom: 1.25rem;
 }
-#Activities .CardsActivities .ActivitieFortDePomegues{
+#Activities .CardsActivities .ActivityFortDePomegues{
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
     border-radius: 1.5625rem;
     width: 18.875rem;
@@ -363,7 +365,7 @@ input[type="search"].inputmapsearch::placeholder {
     margin-bottom: 1.875rem;
     padding-bottom: 0.625rem;    
 }
-#Activities .CardsActivities .ActivitieFortDePomegues img{
+#Activities .CardsActivities .ActivityFortDePomegues img{
     object-fit: cover;
     height: 12rem;
     width: 19rem;
@@ -371,7 +373,7 @@ input[type="search"].inputmapsearch::placeholder {
     border-top-right-radius: 1.5625rem;
     margin-bottom: 1.25rem;
 }
-#Activities .CardsActivities .ActivitieIleDuFrioul{
+#Activities .CardsActivities .ActivityIleDuFrioul{
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
     border-radius: 1.5625rem;
     width: 18.875rem;
@@ -379,7 +381,7 @@ input[type="search"].inputmapsearch::placeholder {
     margin-bottom: 1.875rem;
     padding-bottom: 0.625rem;    
 }
-#Activities .CardsActivities .ActivitieIleDuFrioul img{
+#Activities .CardsActivities .ActivityIleDuFrioul img{
     object-fit: cover;
     height: 7.150rem;
     width: 19rem;
@@ -387,7 +389,7 @@ input[type="search"].inputmapsearch::placeholder {
     border-top-right-radius: 1.5625rem;
     margin-bottom: 1.25rem;
 }
-#Activities .CardsActivities .ActivitieNotreDameDeLaGarde{
+#Activities .CardsActivities .ActivityNotreDameDeLaGarde{
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
     border-radius: 1.5625rem;
     width: 18.875rem;
@@ -395,7 +397,7 @@ input[type="search"].inputmapsearch::placeholder {
     margin-bottom: 1.875rem;
     padding-bottom: 0.625rem;
 }
-#Activities .CardsActivities .ActivitieNotreDameDeLaGarde img{
+#Activities .CardsActivities .ActivityNotreDameDeLaGarde img{
     object-fit: cover;
     height: 9.15rem;
     width: 19rem;
@@ -403,7 +405,7 @@ input[type="search"].inputmapsearch::placeholder {
     border-top-right-radius: 1.5625rem;
     margin-bottom: 1.25rem;
 }
-#Activities .CardsActivities .ActivitieParcLongchamp{
+#Activities .CardsActivities .ActivityParcLongchamp{
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
     border-radius: 1.5625rem;
     width: 18.875rem;
@@ -411,7 +413,7 @@ input[type="search"].inputmapsearch::placeholder {
     margin-bottom: 1.875rem;
     padding-bottom: 0.625rem;
 }
-#Activities .CardsActivities .ActivitieParcLongchamp img{
+#Activities .CardsActivities .ActivityParcLongchamp img{
     object-fit: cover;
     height: 9.90rem;
     width: 19rem;
@@ -428,7 +430,7 @@ footer{
 .footertxt{
     display: flex;
     justify-content:space-between;
-    padding: 1.875rem 0rem;
+    padding: 1.875rem 1.875rem;
     width: 70%;
 }
 .footertxt li{
@@ -450,95 +452,408 @@ footer{
 /* MEDIA QUERIES  */
 /******************/
 
-/* Tablets and Small Desktop Screens */
-/*
-@media screen and (min-width: 768px) and (max-width: 1360px) { ...
-}
-*/ 
-
-/* Phones */
-@media screen and (max-width: 768px) {
+/****************************************** Small Desktop Screens ******************************************/
+@media screen and (min-width: 990px) and (max-width: 1360px) { 
     header{
+        padding: 1.875rem 1.875rem;
         margin: auto;
     }
     #maincontainer{
+        padding: 0rem 1.875rem;
         margin: auto;
-    }
-    footer{
-        width: 100%;
-        background-color: #F2F2F2;
     }
     /* NAVBAR */
     nav.nav-anchor{
-        display: flex;
         justify-content: space-around;
         width: 100%;
         order: 3;
-        padding-bottom: 2em;
+        padding-bottom: 2rem;
     }
     nav.nav-anchor a{
-        text-decoration: none;
-        color: rgba(0,0,0, 0.75);
-        padding: 0em 1em 2.5em 1em;
+        padding: 0rem 1rem 2.5rem 1rem;
         border-bottom: 0.125rem solid #F2F2F2;
         border-top: none;
         width: 50%;
         text-align: center;
     }
     nav.nav-anchor a:hover{
-        text-decoration: none;
-        color: #0065FC;
-        padding: 0em 1em 2.5em 1em;
+        padding: 0rem 1rem 2.5rem 1rem;
         border-bottom: 0.125rem solid #0065FC;
         border-top: none;
         width: max-content;
         width: 50%;
         text-align: center;
-
     }
     nav.nav-anchor a.active{
-        text-decoration: none;
-        color: #0065FC;
-        padding: 0em 1em 2.5em 1em;
+        padding: 0rem 1rem 2.5rem 1rem;
         border-bottom: 0.125rem solid #0065FC;
         border-top: none;
         width: max-content;
         width: 50%;
         text-align: center;
-
     }
     a.subscribe{
-        color: #0065FC;
         order: 2;
     }
-
+    /* SEARCH */
     .divformfilter{
-        display: flex;
         flex-direction: column;
-        line-height: 3rem;
         justify-content: flex-start;
-    }
-    .divformfilter h4{
-        margin-right: 1rem;
     }
     .formfilter{
-        display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
         justify-content: flex-start;
-        width: 60%;
-        vertical-align: bottom;
-        line-height: 3rem; 
+        width: 80%;
     }
     .formfilter .divcustomlabel {
-        display: inline-flex;
-        border: 0.125rem solid #F2F2F2;
-        border-radius: 1.5625rem;
-        vertical-align:center;
-        line-height: 3rem;
-        height: 3rem; 
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+    /* RESULTS */
+    #Results{
+        flex-direction: column-reverse;
+    }
+    /* RENTALS */
+    #Rentals{
+        width: 95%;
+    }
+    #Rentals .CardsRentalMain{
+        display: flex;
+        justify-content: center;
+    }
+    #Rentals .CardsRentalFirstRow, .CardsRentalSecondRow{
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem 1.875rem;
+        padding: 0.9375rem 0.9375rem;
+    }
+    /* MOST POPULAR */
+    #Popular{
+        width: 95%;
+        margin-left: 0%;
+        margin-bottom: 2%;
+    }
+    #Popular .CardsPopularMain{
+        display: flex;
+        justify-content: center;
+    }
+    /* ACTIVITIES */
+    #Activities .CardsActivities{
+        width: 95%;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+    #Activities 
+    .CardsActivities .ActivityVieuxPort, 
+    .CardsActivities .ActivityParcNationalDesCalanques,
+    .CardsActivities .ActivityFortDePomegues, 
+    .CardsActivities .ActivityIleDuFrioul, 
+    .CardsActivities .ActivityNotreDameDeLaGarde, 
+    .CardsActivities .ActivityParcLongchamp{
+        margin: 1rem 4rem;
+    }
+    /* FOOTER */
+    .footertxt{
+        padding: 1.875rem 1.875rem;
+        width: 85%;
+    }
+} 
+
+/****************************************** Tablets ******************************************/
+@media screen and (min-width: 576px) and (max-width: 990px){
+    header{
+        padding: 1.875rem 1.875rem;
+        margin: auto;
+    }
+    #maincontainer{
+        padding: 0rem 1.875rem;
+        margin: auto;
+    }
+    /* NAVBAR */
+    nav.nav-anchor{
+        justify-content: space-around;
+        width: 100%;
+        order: 3;
+        padding-bottom: 2rem;
+    }
+    nav.nav-anchor a{
+        padding: 0rem 1rem 2.5rem 1rem;
+        border-bottom: 0.125rem solid #F2F2F2;
+        border-top: none;
+        width: 50%;
+        text-align: center;
+    }
+    nav.nav-anchor a:hover{
+        padding: 0rem 1rem 2.5rem 1rem;
+        border-bottom: 0.125rem solid #0065FC;
+        border-top: none;
+        width: max-content;
+        width: 50%;
+        text-align: center;
+    }
+    nav.nav-anchor a.active{
+        padding: 0rem 1rem 2.5rem 1rem;
+        border-bottom: 0.125rem solid #0065FC;
+        border-top: none;
+        width: max-content;
+        width: 50%;
+        text-align: center;
+    }
+    a.subscribe{
+        order: 2;
+    }
+    /* SEARCH */
+    .divformfilter{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .formfilter{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 80%;
+    }
+    .formfilter .divcustomlabel {
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+    /* RESULTS */
+    #Results{
+        flex-direction: column-reverse;
+    }
+    /* RENTALS */
+    #Rentals{
+        width: 90%;
+    }
+    #Rentals .CardsRentalMain{
+        display: flex;
+        justify-content: center;
+    }
+    #Rentals .CardsRentalFirstRow, .CardsRentalSecondRow{
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem 1.875rem;
+        padding: 0.9375rem 0.9375rem;
+    }
+    /* MOST POPULAR */
+    #Popular{
+        width: 90%;
+        margin-left: 0%;
+        margin-bottom: 2%;
+    }
+    #Popular .CardsPopularMain{
+        display: flex;
+        justify-content: center;
+    }
+    /* ACTIVITIES */
+    #Activities .CardsActivities{
+        width: 95%;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+    #Activities 
+    .CardsActivities .ActivityVieuxPort, 
+    .CardsActivities .ActivityParcNationalDesCalanques,
+    .CardsActivities .ActivityFortDePomegues, 
+    .CardsActivities .ActivityIleDuFrioul, 
+    .CardsActivities .ActivityNotreDameDeLaGarde, 
+    .CardsActivities .ActivityParcLongchamp{
+        margin: 1rem 0.5rem;
+    }
+    /* FOOTER */
+    .footertxt{
+        padding: 1.875rem 1.875rem;
+        width: 85%;
+    }    
+}
+
+/****************************************** Phones ******************************************/
+@media screen and (max-width: 576px) {
+    header{
+        padding: 0rem 0rem;
+        margin: auto;
+    }
+    #maincontainer{
+        padding: 0rem 0rem;
+        margin: auto;
+    }
+    /* HEADER */
+    .logo{
+        padding: 0rem 0.875rem;
+    }
+    #slogan{
+        padding: 0.875rem 0.875rem;
+    }
+    #Search{
+        padding: 0.875rem 0.875rem;
+    }
+    /* NAVBAR */
+    nav.nav-anchor{
+        justify-content: space-around;
+        width: 100%;
+        order: 3;
+        padding-bottom: 2rem;
+    }
+    nav.nav-anchor a{
+        padding: 0rem 1rem 2.5rem 1rem;
+        border-bottom: 0.125rem solid #F2F2F2;
+        border-top: none;
+        width: 50%;
+        text-align: center;
+    }
+    nav.nav-anchor a:hover{
+        padding: 0rem 1rem 2.5rem 1rem;
+        border-bottom: 0.125rem solid #0065FC;
+        border-top: none;
+        width: max-content;
+        width: 50%;
+        text-align: center;
+    }
+    nav.nav-anchor a.active{
+        padding: 0rem 1rem 2.5rem 1rem;
+        border-bottom: 0.125rem solid #0065FC;
+        border-top: none;
+        width: max-content;
+        width: 50%;
+        text-align: center;
+    }
+    a.subscribe{
+        order: 2;
+    }
+    /* SEARCH */
+    input[type="search"].inputmapsearch::placeholder {
+        font-size: 1rem;
+    }
+    .divformfilter{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .formfilter{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .formfilter .divcustomlabel {
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+    .formfilter .divcustomlabel h4{
+        margin-left: 0.525rem;
+        margin-right: 0.525rem;
+    }
+    /* RESULTS */
+    #Results{
+        flex-direction: column-reverse;
+    }
+    /* RENTALS */
+    #Rentals{
+        background-color: #FFF;
+        border-radius: 0rem;
+        padding-left: 0%;
+    }
+    #Rentals .CardsRentalMain{
+        display: flex;
+        flex-direction: column;
+    }
+    #Rentals .CardsRentalFirstRow, .CardsRentalSecondRow{
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem 0rem;
+        padding: 0.9375rem 0rem;
+    }
+    #Rentals .CardsRentalFirstRow img, .CardsRentalSecondRow img{
+        width: 22.55rem;
+    }
+    /* MOST POPULAR */
+    .MostPopular{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+    }
+    #Popular{
+        margin-left: 0%;
+        width: 100%;
+        border-radius: 0rem;
+        padding: 0.50rem 0.50rem;
+    }
+    /* ACTIVITIES */ 
+    #Activities .CardsActivities{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 1% 0% 0% 0%;
+    }
+    #Activities .CardsActivities .MainTwoActivities{
+        margin-bottom: 0em !important;
+    }
+    #Activities 
+    .CardsActivities .ActivityVieuxPort, 
+    .CardsActivities .ActivityParcNationalDesCalanques,
+    .CardsActivities .ActivityFortDePomegues, 
+    .CardsActivities .ActivityIleDuFrioul, 
+    .CardsActivities .ActivityNotreDameDeLaGarde, 
+    .CardsActivities .ActivityParcLongchamp{
+        margin-bottom: 2rem;
+    }
+    #Activities .CardsActivities .ActivityVieuxPort, .CardsActivities .ActivityParcNationalDesCalanques{
+        padding-bottom: 2.25rem;
+        width: 23rem;
+        height: 9.55rem;
+    }
+    #Activities .CardsActivities .ActivityVieuxPort img, .CardsActivities .ActivityParcNationalDesCalanques img{
+        height: 7.55rem;
+        width: 23.2rem;
+        margin-bottom: 1.25rem;
+    }
+    #Activities .CardsActivities .ActivityFortDePomegues{
+        padding-bottom: 2.25rem;
+        width: 23rem;
+        height: 9.55rem;
+    }
+    #Activities .CardsActivities .ActivityFortDePomegues img{
+        height: 7.55rem;
+        width: 23.2rem;
+        margin-bottom: 1.25rem;
+    }
+    #Activities .CardsActivities .ActivityIleDuFrioul{
+        padding-bottom: 2.25rem;
+        width: 23rem;
+        height: 9.55rem;   
+    }
+    #Activities .CardsActivities .ActivityIleDuFrioul img{
+        height: 7.55rem;
+        width: 23.2rem;
+        margin-bottom: 1.25rem;
+    }
+    #Activities .CardsActivities .ActivityNotreDameDeLaGarde{
+        padding-bottom: 2.25rem;
+        width: 23rem;
+        height: 9.55rem;
+    }
+    #Activities .CardsActivities .ActivityNotreDameDeLaGarde img{
+        height: 7.55rem;
+        width: 23.2rem;
+        margin-bottom: 1.25rem;
+    }
+    #Activities .CardsActivities .ActivityParcLongchamp{
+        padding-bottom: 2.25rem;
+        width: 23rem;
+        height: 9.55rem;
+    }
+    #Activities .CardsActivities .ActivityParcLongchamp img{
+        height: 7.55rem;
+        width: 23.2rem;
+        margin-bottom: 1.25rem;
+    }
+    /* FOOTER */
+    .footertxt{
+        flex-direction: column;
+        padding: 1.875rem 1.875rem;
+        width: 85%;
+    }
+    .footertxt div:nth-child(1n){
         margin-bottom: 1rem;
     }
 }
-
-
