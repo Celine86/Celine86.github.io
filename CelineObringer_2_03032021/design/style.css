@@ -4,14 +4,6 @@
     padding: 0;
     font-family: 'Raleway', sans-serif;
 }
-/* body{
-    max-width: 1280px; 
-    margin: 0 auto;
-    font-family: 'Raleway', sans-serif;
-} 
---> Retire le width 100% du Footer du coup on applique des modifications sur chaque section 
-header, maincontainer, footercontainer et non pas footer car le footer a une width de 100% afin que la couleur d'arrière plan prenne toute la largeur
-*/
 h1{
     font-size: 1.375rem;
     font-weight: bold;
@@ -86,12 +78,23 @@ a.subscribe{
 .formmapsearch{
     display: flex;
     flex-direction: row;
-    height: 3.15rem;
+    line-height: 3rem;
+    /*height: 2.85rem;*/
     padding-bottom: 1.25rem;
+}
+.formmapsearch .formmapsearchmain{
+    border: 0.05rem solid #F2F2F2;
+    border-radius: 1rem;
+    display: flex;
 }
 input[type="search"].inputmapsearch::placeholder {
     font-weight: bold;
     font-size: 1.2rem;
+    border: 0;
+}
+.inputmapsearch{
+    width: 15rem;
+    border: none;
 }
 .fa-map-marker-alt{
     background-color: #F2F2F2;
@@ -126,26 +129,27 @@ input[type="search"].inputmapsearch::placeholder {
 }
 .inputmapsearch{
     width: 15rem;
-    border-color: #F2F2F2;
-    border-style: solid;
 }
-.btnmapsearch{
+.btnmapsearch {
     background-color: #0065fc;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     border: none;
-    padding: 0.625rem;
     color: #fff;
     font-weight: bold;
     width: 8rem;
+    line-height: 3rem;
 }
 .btnmapsearch:hover{
     cursor: pointer;
 }
+.btnmapsearch .fa-search{
+    display: none;
+}
 .divformfilter{
     display: flex;
     line-height: 3rem;
-    justify-items: flex-start;
+    justify-content: flex-start;
 }
 .divformfilter h4{
     margin-right: 1rem;
@@ -153,10 +157,11 @@ input[type="search"].inputmapsearch::placeholder {
 .formfilter{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     width: 60%;
     vertical-align: bottom;
     line-height: 3rem; 
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 .formfilter input[type=checkbox] {
     display: none;
@@ -168,6 +173,7 @@ input[type="search"].inputmapsearch::placeholder {
     vertical-align:center;
     line-height: 3rem;
     height: 3rem; 
+    margin-right: 1rem;
 }
 .formfilter .divcustomlabel:hover{
     color: #DEEBFF;
@@ -215,47 +221,48 @@ input[type="search"].inputmapsearch::placeholder {
 #Rentals #More{
     padding-top: 0.9375rem;
 }
-#Rentals .CardsRentalFirstRow, .CardsRentalSecondRow{
+#Rentals .CardsRentalMain{
     display: flex;
     flex-direction: row;
-    gap: 0rem 1.875rem;
+    flex-wrap: wrap;
+    gap: 1rem 1rem;
     padding: 0.9375rem 0rem;
 }
-#Rentals .CardsRentalFirstRow div, .CardsRentalSecondRow div{
+#Rentals .CardsRentalMain div{
     background-color: #fff;
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
     border-radius: 1.5625rem;
     padding: 0.3125rem 0.3125rem;
 }
-#Rentals .CardsRentalFirstRow img, .CardsRentalSecondRow img{
+#Rentals .CardsRentalMain img{
     border-top-left-radius: 1.5625rem;
     border-top-right-radius: 1.5625rem;
     object-fit: cover;
     height: 7.55rem;
     width: 14.55rem;
 }
-#Rentals .CardsRentalFirstRow h3, .CardsRentalSecondRow h3{
+#Rentals .CardsRentalMain h3{
     padding-left: 0.625rem;
 }    
-#Rentals .CardsRentalFirstRow p, .CardsRentalSecondRow p{
+#Rentals .CardsRentalMain p{
     padding-left: 0.625rem;
 }  
-#Rentals .CardsRentalFirstRow span, .CardsRentalSecondRow span{
+#Rentals .CardsRentalMain span{
     font-weight: bold;
 }
 .fa-star{
     font-size:  0.75rem;
 }
-#Rentals .CardsRentalFirstRow .stars, .CardsRentalSecondRow .stars{
+#Rentals .CardsRentalMain .stars{
     display: flex;
     margin-top: 0.3125rem;
     padding-left: 0.625rem;
 }
-#Rentals .CardsRentalFirstRow a, .CardsRentalSecondRow a{
+#Rentals .CardsRentalMain a{
     text-decoration: none;
     color: #000 !important;
 }
-#Rentals .CardsRentalFirstRow a:hover, .CardsRentalSecondRow a:hover{
+#Rentals .CardsRentalMain a:hover{
     text-decoration: none;
     color: #0065fc !important;
 }
@@ -263,54 +270,60 @@ input[type="search"].inputmapsearch::placeholder {
 .MostPopular{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+    padding-bottom: 2rem;
 }
 .MostPopular .fa-chart-line{
-    float: right;
     font-size: 1.5rem;
 }
 #Popular{
     background-color: #F2F2F2;
     border-radius: 1.5625rem;
     padding: 1.875rem 1.875rem;
-    margin-left: 2%;
+    margin-left: 2%; 
 }
-#Popular .CardsPopular{
+#Popular .CardsPopular .MostPopularChildContainer{
     padding: 1.875rem 0rem;
     display: flex;
     flex-direction: column;
     width: 22rem;
 }
-#Popular .CardsPopular span{
+#Popular .CardsPopular .MostPopularChildContainer span{
     font-weight: bold;
 }
-#Popular .CardsPopular div:nth-child(1n){
+#Popular .CardsPopular .MostPopularChildContainer{
+    display: flex;
+    flex-direction: row;
     background-color: #FFF;
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
     border-radius: 1.5625rem;
     padding: 0.3125rem 1.5625rem 0.3125rem 0.3125rem;
     margin-bottom: 1.25rem;
+    width: 20rem;
+    height: 8.75rem; 
 }
-#Popular .CardsPopular img{
+#Popular .CardsPopular .MostPopularChildContainer img{
     border-top-left-radius: 1.5625rem;
     border-bottom-left-radius: 1.5625rem;
     object-fit: cover;
-    height: 8.75rem;
+    height: 100%;
     width: 8.25rem;
-    float: left;
     margin-right: 0.625rem;
 }
-#Popular .CardsPopular h3{
+#Popular .CardsPopular .MostPopularChildContainerDescription{
+    width: 11rem;
+}
+#Popular .CardsPopular .MostPopularChildContainerDescription h3{
     margin-top: 4%;
     display: flex;
 }
-#Popular .CardsPopular p{
+#Popular .CardsPopular .MostPopularChildContainerDescription p{
     display: flex;
 }
-#Popular .CardsPopular .stars{
+#Popular .CardsPopular .MostPopularChildContainerDescription .stars{
     display: flex;
-    padding-top: 16%;
-    display: flex;
+    padding-top: 30%;
 }
 #Popular .CardsPopular a{
     text-decoration: none;
@@ -449,13 +462,13 @@ footer{
     text-decoration: underline;
 }
 
+
 /******************/
 /* MEDIA QUERIES  */
 /******************/
 
 /****************************************** Small Desktop Screens ******************************************/
-/* Pour une meilleure transition entre les différentes résoltion */ 
-@media screen and (min-width: 990px) and (max-width: 1360px) { 
+@media screen and (min-width: 768px) and (max-width: 1360px) { 
     header{
         padding: 1.875rem 1.875rem;
         margin: auto;
@@ -463,6 +476,10 @@ footer{
     #maincontainer{
         padding: 0rem 1.875rem;
         margin: auto;
+    }
+    #footercontainer{
+        padding: 1.875rem 1.875rem;
+        margin: auto;    
     }
     /* NAVBAR */
     nav.nav-anchor{
@@ -500,160 +517,42 @@ footer{
     /* SEARCH */
     .divformfilter{
         flex-direction: column;
-        justify-content: flex-start;
     }
     .formfilter{
-        flex-wrap: wrap;
-        justify-content: flex-start;
         width: 80%;
     }
     .formfilter .divcustomlabel {
         margin-bottom: 1rem;
-        margin-right: 1rem;
     }
     /* RESULTS */
     #Results{
         flex-direction: column-reverse;
     }
     /* RENTALS */
-    #Rentals{
-        width: 95%;
-    }
     #Rentals .CardsRentalMain{
-        display: flex;
-        justify-content: center;
-    }
-    #Rentals .CardsRentalFirstRow, .CardsRentalSecondRow{
-        display: flex;
-        flex-direction: column;
-        gap: 1.875rem 1.875rem;
-        padding: 0.9375rem 0.9375rem;
+    display: flex;
+    justify-content: center;
     }
     /* MOST POPULAR */
     #Popular{
-        width: 95%;
         margin-left: 0%;
         margin-bottom: 2%;
+        padding: 0.875rem 0.875rem;
     }
-    #Popular .CardsPopularMain{
+    #Popular .CardsPopular {
         display: flex;
+        flex-direction: row;
         justify-content: center;
+        gap: 1em;
+        flex-wrap: wrap;
     }
     /* ACTIVITIES */
     #Activities .CardsActivities{
-        width: 95%;
+        max-width: 900px;
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
-    }
-    #Activities 
-    .CardsActivities .ActivityVieuxPort, 
-    .CardsActivities .ActivityParcNationalDesCalanques,
-    .CardsActivities .MainTwoActivities .ActivityFortDePomegues, 
-    .CardsActivities .MainTwoActivities .ActivityIleDuFrioul, 
-    .CardsActivities .MainTwoActivities .ActivityNotreDameDeLaGarde, 
-    .CardsActivities .MainTwoActivities .ActivityParcLongchamp{
-        margin: 1rem 4rem;
-    }
-    /* Afin que Activities s'affiche sur deux colonnes et non sur trois */ 
-    /* FOOTER */
-    .footertxt{
-        padding: 1.875rem 1.875rem;
-        width: 85%;
-    }
-} 
-
-/****************************************** Tablets ******************************************/
-@media screen and (min-width: 576px) and (max-width: 990px){
-    header{
-        padding: 1.875rem 1.875rem;
         margin: auto;
-    }
-    #maincontainer{
-        padding: 0rem 1.875rem;
-        margin: auto;
-    }
-    /* NAVBAR */
-    nav.nav-anchor{
-        justify-content: space-around;
-        width: 100%;
-        order: 3;
-        padding-bottom: 2rem;
-    }
-    nav.nav-anchor a{
-        padding: 0rem 1rem 2.5rem 1rem;
-        border-bottom: 0.125rem solid #F2F2F2;
-        border-top: none;
-        width: 50%;
-        text-align: center;
-    }
-    nav.nav-anchor a:hover{
-        padding: 0rem 1rem 2.5rem 1rem;
-        border-bottom: 0.125rem solid #0065FC;
-        border-top: none;
-        width: max-content;
-        width: 50%;
-        text-align: center;
-    }
-    nav.nav-anchor a.active{
-        padding: 0rem 1rem 2.5rem 1rem;
-        border-bottom: 0.125rem solid #0065FC;
-        border-top: none;
-        width: max-content;
-        width: 50%;
-        text-align: center;
-    }
-    a.subscribe{
-        order: 2;
-    }
-    /* SEARCH */
-    .divformfilter{
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    .formfilter{
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        width: 80%;
-    }
-    .formfilter .divcustomlabel {
-        margin-bottom: 1rem;
-        margin-right: 1rem;
-    }
-    /* RESULTS */
-    #Results{
-        flex-direction: column-reverse;
-    }
-    /* RENTALS */
-    #Rentals{
-        width: 90%;
-    }
-    #Rentals .CardsRentalMain{
-        display: flex;
-        justify-content: center;
-    }
-    #Rentals .CardsRentalFirstRow, .CardsRentalSecondRow{
-        display: flex;
-        flex-direction: column;
-        gap: 1.875rem 1.875rem;
-        padding: 0.9375rem 0.9375rem;
-    }
-    /* MOST POPULAR */
-    #Popular{
-        width: 90%;
-        margin-left: 0%;
-        margin-bottom: 2%;
-    }
-    #Popular .CardsPopularMain{
-        display: flex;
-        justify-content: center;
-    }
-    /* ACTIVITIES */
-    #Activities .CardsActivities{
-        width: 95%;
-        flex-wrap: wrap;
-        display: flex;
-        justify-content: center;
     }
     #Activities 
     .CardsActivities .ActivityVieuxPort, 
@@ -664,16 +563,14 @@ footer{
     .CardsActivities .MainTwoActivities .ActivityParcLongchamp{
         margin: 1rem 0.5rem;
     }
-    /* Travail sur les espacements entre les activités pour un affiche plus sympa */ 
     /* FOOTER */
     .footertxt{
         padding: 1.875rem 1.875rem;
         width: 85%;
-    }    
+    } 
 }
-
-/****************************************** Phones ******************************************/
-@media screen and (max-width: 576px) {
+/****************************************** Phones and Small Tablets******************************************/
+@media screen and (max-width: 768px) {
     header{
         padding: 0rem 0rem;
         margin: auto;
@@ -681,6 +578,10 @@ footer{
     #maincontainer{
         padding: 0rem 0rem;
         margin: auto;
+    }
+    #footercontainer{
+        padding: 0rem 0rem;
+        margin: auto;    
     }
     /* HEADER */
     .logo{
@@ -729,6 +630,16 @@ footer{
     input[type="search"].inputmapsearch::placeholder {
         font-size: 1rem;
     }
+    .btnmapsearch .desktoptablet{
+        display: none;
+    }
+    .btnmapsearch .fa-search{
+        display: block;
+    }
+    .btnmapsearch{
+        border-radius: 1rem;
+        width: 3rem;
+    }
     .divformfilter{
         flex-direction: column;
         justify-content: flex-start;
@@ -750,52 +661,64 @@ footer{
     #Results{
         flex-direction: column-reverse;
     }
-    /* RENTALS */
-    #Rentals{
-        background-color: #FFF;
-        border-radius: 0rem;
-        padding-left: 0%;
-    }
-    #Rentals .CardsRentalMain{
-        display: flex;
-        flex-direction: column;
-    }
-    #Rentals .CardsRentalFirstRow, .CardsRentalSecondRow{
-        display: flex;
-        flex-direction: column;
-        gap: 1.875rem 0rem;
-        padding: 0.9375rem 0rem;
-    }
-    #Rentals .CardsRentalFirstRow img, .CardsRentalSecondRow img{
-        width: 22.55rem;
-    }
     /* MOST POPULAR */
     .MostPopular{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 90%;
+        padding: 0.5rem 0.5rem;
     }
     #Popular{
         margin-left: 0%;
         width: 100%;
         border-radius: 0rem;
-        padding: 0.50rem 0.50rem;
+        padding: 0.5rem 0rem;
+    }
+    #Popular .CardsPopular {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0.5rem;
+        flex-wrap: wrap;
+    }
+    #Popular .CardsPopular .MostPopularChildContainer{
+        width: 20.55rem;
+        height: 8.75rem; 
+    }
+    #Popular .CardsPopular .MostPopularChildContainer img{
+        height: 100%;
+        width: 8.25rem;
+    }
+    /* RENTALS */
+    #Rentals{
+        background-color: #FFF;
+        border-radius: 0rem;
+        padding: 0.5rem 0.5rem;
+        margin-right: auto;
+    }
+    #Rentals .CardsRentalMain{
+        display: flex;
+        justify-content: center;
+        padding: 0rem 0rem 0.5rem 0rem;
+    }
+    #Rentals .CardsRentalMain img{
+        width: 20.55rem;
     }
     /* ACTIVITIES */ 
+    #Activities{ 
+        padding: 0.5rem 0.5rem;
+    }
     #Activities h2{
         margin-bottom: 2rem;
     }
     #Activities .CardsActivities{
-        display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        margin: 1% 0% 0% 0%;
+        align-items: center;
+        padding: 0rem 0rem;
     }
     #Activities .CardsActivities .MainTwoActivities{
-        margin-bottom: 0em !important;
+        margin-bottom: 0rem !important;
     }
-    /* Eviter un trop grand espace entre Ile du Frioul et Parc National des Calanques */
     #Activities 
     .CardsActivities .ActivityVieuxPort, 
     .CardsActivities .ActivityParcNationalDesCalanques,
@@ -805,85 +728,65 @@ footer{
     .CardsActivities .MainTwoActivities .ActivityParcLongchamp{
         margin-bottom: 2rem;
     }
-/*
-    #Activities 
-    .CardsActivities .ActivityVieuxPort, 
-    .CardsActivities .ActivityParcNationalDesCalanques,
-    .CardsActivities .MainTwoActivities .ActivityFortDePomegues, 
-    .CardsActivities .MainTwoActivities .ActivityIleDuFrioul, 
-    .CardsActivities .MainTwoActivities .ActivityNotreDameDeLaGarde, 
-    .CardsActivities .MainTwoActivities .ActivityParcLongchamp{
-        padding-bottom: 2.25rem;
-        width: 23rem;
-        height: 9.55rem;
-    }
-    #Activities 
-    .CardsActivities .ActivityVieuxPort img, 
-    .CardsActivities .ActivityParcNationalDesCalanques img,
-    .CardsActivities .MainTwoActivities .ActivityFortDePomegues img, 
-    .CardsActivities .MainTwoActivities .ActivityIleDuFrioul img, 
-    .CardsActivities .MainTwoActivities .ActivityNotreDameDeLaGarde img, 
-    .CardsActivities .MainTwoActivities .ActivityParcLongchamp img{
-        height: 7.55rem;
-        width: 23.2rem;
-        margin-bottom: 1.25rem;
-    }
-*/
-/* Cela ne fonctionne pas si on réunit les CardsActivities, est-ce parce que les activités sont séparées en version desktop ? */ 
     #Activities .CardsActivities .ActivityVieuxPort, .CardsActivities .ActivityParcNationalDesCalanques{
-        padding-bottom: 2.25rem;
-        width: 23rem;
+        padding-bottom: 3.25rem;
+        width: 21rem;
         height: 9.55rem;
     }
     #Activities .CardsActivities .ActivityVieuxPort img, .CardsActivities .ActivityParcNationalDesCalanques img{
-        height: 7.55rem;
-        width: 23.2rem;
+        height: 8.55rem;
+        object-fit: cover;
+        width: 21.2rem;
         margin-bottom: 1.25rem;
     }
     #Activities .CardsActivities .ActivityFortDePomegues{
-        padding-bottom: 2.25rem;
-        width: 23rem;
+        padding-bottom: 3.25rem;
+        width: 21rem;
         height: 9.55rem;
     }
     #Activities .CardsActivities .ActivityFortDePomegues img{
-        height: 7.55rem;
-        width: 23.2rem;
+        height: 8.55rem;
+        object-fit: cover;
+        width: 21.2rem;
         margin-bottom: 1.25rem;
     }
     #Activities .CardsActivities .ActivityIleDuFrioul{
-        padding-bottom: 2.25rem;
-        width: 23rem;
+        padding-bottom: 3.25rem;
+        width: 21rem;
         height: 9.55rem;   
     }
     #Activities .CardsActivities .ActivityIleDuFrioul img{
-        height: 7.55rem;
-        width: 23.2rem;
+        height: 8.55rem;
+        object-fit: cover;
+        width: 21.2rem;
         margin-bottom: 1.25rem;
     }
     #Activities .CardsActivities .ActivityNotreDameDeLaGarde{
-        padding-bottom: 2.25rem;
-        width: 23rem;
+        padding-bottom: 3.25rem;
+        width: 21rem;
         height: 9.55rem;
     }
     #Activities .CardsActivities .ActivityNotreDameDeLaGarde img{
-        height: 7.55rem;
-        width: 23.2rem;
+        height: 8.55rem;
+        object-fit: cover;
+        width: 21.2rem;
         margin-bottom: 1.25rem;
     }
     #Activities .CardsActivities .ActivityParcLongchamp{
-        padding-bottom: 2.25rem;
-        width: 23rem;
+        padding-bottom: 3.25rem;
+        width: 21rem;
         height: 9.55rem;
     }
     #Activities .CardsActivities .ActivityParcLongchamp img{
-        height: 7.55rem;
-        width: 23.2rem;
+        height: 8.55rem;
+        object-fit: cover;
+        width: 21.2rem;
         margin-bottom: 1.25rem;
     }
     /* FOOTER */
     .footertxt{
         flex-direction: column;
-        padding: 1.875rem 1.875rem;
+        padding: 0.5rem 0.5rem;
         width: 85%;
     }
     .footertxt div:nth-child(1n){
