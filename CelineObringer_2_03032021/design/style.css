@@ -280,7 +280,7 @@ input[type="search"].inputmapsearch::placeholder {
     background-color: #F2F2F2;
     border-radius: 1.5625rem;
     padding: 1.875rem 1.875rem;
-    margin-left: 2%; 
+    margin-left: 2rem; 
 }
 #Popular .CardsPopular .MostPopularChildContainer{
     padding: 1.875rem 0rem;
