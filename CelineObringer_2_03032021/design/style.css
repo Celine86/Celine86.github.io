@@ -725,62 +725,22 @@ footer{
     .CardsActivities .MainTwoActivities .ActivityIleDuFrioul, 
     .CardsActivities .MainTwoActivities .ActivityNotreDameDeLaGarde, 
     .CardsActivities .MainTwoActivities .ActivityParcLongchamp{
-        margin-bottom: 2rem;
+        margin-bottom: 2rem !important;
+        padding-bottom: 3.25rem !important;
+        width: 21rem !important;
+        height: 9.55rem !important;
     }
-    #Activities .CardsActivities .ActivityVieuxPort, .CardsActivities .ActivityParcNationalDesCalanques{
-        padding-bottom: 3.25rem;
-        width: 21rem;
-        height: 9.55rem;
-    }
-    #Activities .CardsActivities .ActivityVieuxPort img, .CardsActivities .ActivityParcNationalDesCalanques img{
-        height: 8.55rem;
-        object-fit: cover;
-        width: 21.2rem;
-        margin-bottom: 1.25rem;
-    }
-    #Activities .CardsActivities .ActivityFortDePomegues{
-        padding-bottom: 3.25rem;
-        width: 21rem;
-        height: 9.55rem;
-    }
-    #Activities .CardsActivities .ActivityFortDePomegues img{
-        height: 8.55rem;
-        object-fit: cover;
-        width: 21.2rem;
-        margin-bottom: 1.25rem;
-    }
-    #Activities .CardsActivities .ActivityIleDuFrioul{
-        padding-bottom: 3.25rem;
-        width: 21rem;
-        height: 9.55rem;   
-    }
-    #Activities .CardsActivities .ActivityIleDuFrioul img{
-        height: 8.55rem;
-        object-fit: cover;
-        width: 21.2rem;
-        margin-bottom: 1.25rem;
-    }
-    #Activities .CardsActivities .ActivityNotreDameDeLaGarde{
-        padding-bottom: 3.25rem;
-        width: 21rem;
-        height: 9.55rem;
-    }
-    #Activities .CardsActivities .ActivityNotreDameDeLaGarde img{
-        height: 8.55rem;
-        object-fit: cover;
-        width: 21.2rem;
-        margin-bottom: 1.25rem;
-    }
-    #Activities .CardsActivities .ActivityParcLongchamp{
-        padding-bottom: 3.25rem;
-        width: 21rem;
-        height: 9.55rem;
-    }
-    #Activities .CardsActivities .ActivityParcLongchamp img{
-        height: 8.55rem;
-        object-fit: cover;
-        width: 21.2rem;
-        margin-bottom: 1.25rem;
+    #Activities 
+    .CardsActivities .ActivityVieuxPort img, 
+    .CardsActivities .ActivityParcNationalDesCalanques img,
+    .CardsActivities .MainTwoActivities .ActivityFortDePomegues img, 
+    .CardsActivities .MainTwoActivities .ActivityIleDuFrioul img, 
+    .CardsActivities .MainTwoActivities .ActivityNotreDameDeLaGarde img, 
+    .CardsActivities .MainTwoActivities .ActivityParcLongchamp img{
+        height: 8.55rem !important;
+        object-fit: cover !important;
+        width: 21.2rem !important;
+        margin-bottom: 1.25rem !important;
     }
     /* FOOTER */
     .footertxt{
