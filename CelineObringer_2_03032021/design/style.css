@@ -547,7 +547,7 @@ footer{
     }
     /* ACTIVITIES */
     #Activities .CardsActivities{
-        padding: 0rem 12.5rem;
+        max-width: 900px;
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
