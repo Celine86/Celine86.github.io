@@ -547,11 +547,16 @@ footer{
     }
     /* ACTIVITIES */
     #Activities .CardsActivities{
-        max-width: 900px;
         flex-wrap: wrap;
         display: flex;
+        flex-direction: row;
         justify-content: center;
         margin: auto;
+    }
+    #Activities .CardsActivities .CardsActivitiesChild{
+        display: flex;
+        justify-content: center;
+        flex:50%;
     }
     #Activities 
     .CardsActivities .ActivityVieuxPort, 
