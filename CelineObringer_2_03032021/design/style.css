@@ -15,10 +15,14 @@ header{
     max-width: 1280px;
     margin: auto;
 }
-#maincontainer{
+main{
     max-width: 1280px;
     margin: auto;
 }
+/*#maincontainer{
+    max-width: 1280px;
+    margin: auto;
+}*/
 #footercontainer{
     max-width: 1280px;
     margin: auto;    
@@ -472,10 +476,14 @@ footer{
         padding: 1.875rem 1.875rem;
         margin: auto;
     }
-    #maincontainer{
+    main{
         padding: 0rem 1.875rem;
         margin: auto;
     }
+    /*#maincontainer{
+        padding: 0rem 1.875rem;
+        margin: auto;
+    }*/
     #footercontainer{
         padding: 1.875rem 1.875rem;
         margin: auto;    
@@ -579,10 +587,14 @@ footer{
         padding: 0rem 0rem;
         margin: auto;
     }
-    #maincontainer{
+    main{
         padding: 0rem 0rem;
         margin: auto;
     }
+    /*#maincontainer{
+        padding: 0rem 0rem;
+        margin: auto;
+    }*/
     #footercontainer{
         padding: 0rem 0rem;
         margin: auto;    
