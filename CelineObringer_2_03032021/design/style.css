@@ -282,12 +282,6 @@ input[type="search"].inputmapsearch::placeholder {
     padding: 1.875rem 1.875rem;
     margin-left: 2rem; 
 }
-#Popular .CardsPopular .MostPopularChildContainer{
-    padding: 1.875rem 0rem;
-    display: flex;
-    flex-direction: column;
-    width: 22rem;
-}
 #Popular .CardsPopular .MostPopularChildContainer span{
     font-weight: bold;
 }
