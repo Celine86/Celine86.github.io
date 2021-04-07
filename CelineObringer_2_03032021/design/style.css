@@ -282,9 +282,6 @@ input[type="search"].inputmapsearch::placeholder {
     padding: 1.875rem 1.875rem;
     margin-left: 2rem; 
 }
-#Popular .CardsPopular .MostPopularChildContainer span{
-    font-weight: bold;
-}
 #Popular .CardsPopular .MostPopularChildContainer{
     display: flex;
     flex-direction: row;
@@ -313,6 +310,9 @@ input[type="search"].inputmapsearch::placeholder {
 }
 #Popular .CardsPopular .MostPopularChildContainerDescription p{
     display: flex;
+}
+#Popular .CardsPopular .MostPopularChildContainerDescription span{
+    font-weight: bold;
 }
 #Popular .CardsPopular .MostPopularChildContainerDescription .stars{
     display: flex;
