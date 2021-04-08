@@ -124,7 +124,6 @@ input[type="search"].inputmapsearch::placeholder {
     text-align: center;
     font-size:  0.75rem;
     margin-right: 0.625rem;
-    vertical-align: middle;
 }
 .inputmapsearch{
     width: 15rem;
@@ -157,7 +156,6 @@ input[type="search"].inputmapsearch::placeholder {
     display: flex;
     flex-direction: row;
     width: 60%;
-    vertical-align: bottom;
     line-height: 3rem; 
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -191,7 +189,6 @@ input[type="search"].inputmapsearch::placeholder {
     height: 3rem;
     display:inline-block;
     text-align: center;
-    vertical-align: bottom;
     line-height: 3rem;
     border-radius: 1.5rem;
 }
