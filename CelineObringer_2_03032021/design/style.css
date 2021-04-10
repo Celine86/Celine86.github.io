@@ -457,7 +457,7 @@ footer{
 /******************/
 
 /****************************************** Small Desktop Screens and Tablets ******************************************/
-@media screen and (min-width: 768px) and (max-width: 1360px) { 
+@media screen and (min-width: 751px) and (max-width: 1360px) { 
     header{
         padding: 1.875rem 1.875rem;
         margin: auto;
@@ -564,7 +564,7 @@ footer{
     } 
 }
 /****************************************** Phones and Small Tablets******************************************/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 750px) {
     header{
         padding: 0rem 0rem;
         margin: auto;
