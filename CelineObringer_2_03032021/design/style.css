@@ -540,6 +540,17 @@ footer{
         gap: 1em;
         flex-wrap: wrap;
     }
+    #Popular .CardsPopular .MostPopularChildContainer{
+        width: 26rem;
+        height: 10.75rem; 
+    }
+    #Popular .CardsPopular .MostPopularChildContainer img{
+        height: 100%;
+        width: 14.25rem;
+    }
+    #Popular .CardsPopular .MostPopularChildContainerDescription .stars{
+        padding-top: 50%;
+    }
     /* ACTIVITIES */
     #Activities .CardsActivities{
         flex-wrap: wrap;
