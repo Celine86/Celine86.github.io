@@ -36,7 +36,8 @@ main{
 #slogan{
     padding-bottom: 1.25rem;
 }
-#slogan h4{
+#slogan h2{
+    font-size: 1rem !important;
     font-weight: normal;
 }
 /* NAVBAR */
@@ -149,7 +150,8 @@ input[type="search"].inputmapsearch::placeholder {
     line-height: 3rem;
     justify-content: flex-start;
 }
-.divformfilter h4{
+.divformfilter h3{
+    font-size: 1rem;
     margin-right: 1rem;
 }
 .formfilter{
@@ -192,7 +194,7 @@ input[type="search"].inputmapsearch::placeholder {
     line-height: 3rem;
     border-radius: 1.5rem;
 }
-.formfilter .divcustomlabel h4{
+.formfilter .divcustomlabel h3{
     font-size: 0.9rem;
     display: inline;
     margin-left: 0.625rem;
@@ -650,7 +652,7 @@ footer{
         margin-bottom: 1rem;
         margin-right: 1rem;
     }
-    .formfilter .divcustomlabel h4{
+    .formfilter .divcustomlabel h3{
         margin-left: 0.525rem;
         margin-right: 0.525rem;
     }
