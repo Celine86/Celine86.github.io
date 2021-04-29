@@ -1,3 +1,5 @@
+/* $color-primary-hover: lighten($color-primary, 10%); */
+/* $color-secondary-hover: lighten($color-secondary, 10%); */
 footer, #fonctionnement ol, #reservation .inforeservation {
   display: flex;
   flex-direction: column;
@@ -9,7 +11,7 @@ main {
   justify-content: center;
 }
 
-#restaurants .cardsrestaurants .fchome, .headerrestaurant {
+.menurestaurant__header, #restaurants .cardsrestaurants .fhome__figcaption, .headerrestaurant {
   display: flex;
   flex-direction: row;
 }
@@ -29,7 +31,7 @@ footer a, #restaurants .cardsrestaurants a {
   text-decoration: none;
 }
 
-i.fas.fa-store, i.fas.fa-list, i.fa.fa-mobile {
+i.fas.fa-store, i.fas.fa-list, i.fas.fa-mobile-alt {
   font-size: 1.3rem;
   padding: 0rem 1rem 0rem 0.5rem;
   color: #7e7e7e;
@@ -38,11 +40,8 @@ i.fas.fa-store, i.fas.fa-list, i.fa.fa-mobile {
 #fonctionnement li:hover .fas {
   color: #9356DC;
 }
-#fonctionnement li:hover .fa {
-  color: #9356DC;
-}
 
-.Commander, .Explorer {
+.menurestaurant__btn--style, .inforeservation__btn {
   margin: 2rem;
   border-radius: 1.4625rem;
   font-weight: bold;
@@ -51,10 +50,21 @@ i.fas.fa-store, i.fas.fa-list, i.fa.fa-mobile {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
 }
-.Commander:hover, .Explorer:hover {
-  /*transform: scale(1.025, 1.025);*/
+.menurestaurant__btn--style:hover, .inforeservation__btn:hover {
   box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
-  background: linear-gradient(0deg, rgba(146, 86, 220, 0.75), rgba(255, 121, 217, 0.75));
+  /* background: linear-gradient(0deg, $color-primary-hover, $color-secondary-hover);*/
+  animation: 1.5s button-hover forwards;
+}
+
+.picrestaurant, #restaurants .cardsrestaurants img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.menurestaurant__menus .menu .menu__details:hover .menu__details__animation, .menurestaurant__menus .menu .menu__details__prix, .menurestaurant__menus .menu .menu__details__dscrpt {
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+  height: 3.5rem;
 }
 
 * {
@@ -76,46 +86,137 @@ body {
 
 i.fas.fa-utensils {
   font-size: 1rem;
-  padding-right: 1.5rem;
+  padding: 0rem 1.5rem 0rem 0rem;
 }
 i.fas.fa-hands-helping {
   font-size: 1rem;
-  padding-right: 1rem;
+  padding: 0rem 1rem 0rem 0rem;
+}
+i.fas.fa-mobile-alt {
+  padding: 0rem 1.3rem 0rem 0.5rem !important;
 }
 i.fas.fa-arrow-left {
   font-size: 2rem;
 }
-i.fas.fa-heart {
-  font-size: 2rem;
+i.fas.fa-check {
+  font-size: 1rem;
+  background-color: #FFF;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 2rem;
+  color: #99E2D0;
 }
 
-i.far {
-  font-size: 2rem;
-}
-
-.Explorer {
+.inforeservation__btn {
   padding: 1rem;
 }
 
-.Commander {
+.menurestaurant__btn--style {
   padding: 1rem;
   width: 10rem;
 }
 
+@keyframes like {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes button-hover {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+@keyframes fct-hover {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu__details--n1 {
+  animation: menu 1s;
+}
+
+.menu__details--n2 {
+  animation: menu 2s;
+}
+
+.menu__details--n3 {
+  animation: menu 3s;
+}
+
+.menu__details--n4 {
+  animation: menu 4s;
+}
+
+@keyframes menu {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slidein {
+  from {
+    opacity: 0;
+    width: 0rem;
+  }
+  to {
+    opacity: 1;
+    width: 3rem;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .logo {
   padding: 1rem;
   box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
 }
 
 .headerrestaurant {
-  padding: 1rem;
+  margin: 1rem;
 }
 .headerrestaurant img {
   margin: auto;
 }
 
 #reservation {
-  padding-top: 0.2rem;
+  margin: 0.2rem 0rem 0rem 0rem;
 }
 #reservation .searchreservation {
   padding: 1rem;
@@ -132,32 +233,44 @@ i.far {
 #reservation h2 {
   font-weight: 100;
   font-size: 1.2rem;
-  padding: 1rem;
+  margin: 1rem;
   text-align: center;
 }
 
 #fonctionnement {
-  padding: 2rem 1rem;
+  margin: 2rem 1rem;
 }
 #fonctionnement h2 {
-  padding: 1rem 0rem 3rem 0rem;
+  margin: 1rem 0rem 3rem 0rem;
 }
 #fonctionnement ol {
   align-items: center;
   counter-reset: steps;
-  padding-bottom: 3rem;
+  margin: 0rem 0rem 3rem 0rem;
+}
+@media screen and (min-width: 1320px) {
+  #fonctionnement ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 #fonctionnement li {
   list-style-type: none;
   counter-increment: steps;
   align-content: center;
   padding: 1.3rem 4rem 1.3rem 0rem;
-  margin: 0 0 1rem 0;
+  margin: 0rem 0rem 1rem 0rem;
   border-radius: 1.4625rem;
   width: 17rem;
   background-color: #f6f6f6;
   font-weight: bold;
   box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 1320px) {
+  #fonctionnement li {
+    margin: 0rem 1rem;
+  }
 }
 #fonctionnement li::before {
   content: counter(steps);
@@ -172,6 +285,7 @@ i.far {
 #fonctionnement li:hover {
   color: #FFF;
   background-color: #FF79DA;
+  animation: fct-hover 1.5s forwards;
 }
 
 #restaurants {
@@ -179,12 +293,19 @@ i.far {
   background-color: #f6f6f6;
 }
 #restaurants h2 {
-  padding: 1rem 0rem 2rem 0rem;
+  margin: 1rem 0rem 2rem 0rem;
 }
 #restaurants .cardsrestaurants {
   flex-wrap: wrap;
   gap: 1rem 1rem;
-  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 1320px) {
+  #restaurants .cardsrestaurants {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
 }
 #restaurants .cardsrestaurants .fhome {
   box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
@@ -193,7 +314,37 @@ i.far {
   width: 22rem;
   position: relative;
 }
-#restaurants .cardsrestaurants .fhome .figure__new {
+@media screen and (min-width: 1320px) {
+  #restaurants .cardsrestaurants .fhome {
+    height: 20rem;
+    width: 34rem;
+  }
+}
+#restaurants .cardsrestaurants .fhome__figcaption {
+  justify-content: space-between;
+  margin: 1rem;
+}
+#restaurants .cardsrestaurants .fhome__figcaption__like {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+}
+#restaurants .cardsrestaurants .fhome__figcaption__like:hover .heartunchecked {
+  opacity: 0;
+}
+#restaurants .cardsrestaurants .fhome__figcaption__like:hover .heartchecked {
+  fill: url(#lineargradient);
+  margin-left: -2rem;
+  animation: like 2s ease-in-out forwards;
+}
+#restaurants .cardsrestaurants .fhome__figcaption__like .heartunchecked {
+  opacity: 1;
+}
+#restaurants .cardsrestaurants .fhome__figcaption__like .heartchecked {
+  opacity: 0;
+  margin-left: -2rem;
+}
+#restaurants .cardsrestaurants .fhome__span--new {
   background-color: #99e2d0;
   color: #008766;
   padding: 0.4rem;
@@ -202,15 +353,8 @@ i.far {
   right: 1.5rem;
 }
 #restaurants .cardsrestaurants img {
-  border-top-left-radius: 1.4625rem;
-  border-top-right-radius: 1.4625rem;
-  object-fit: cover;
+  border-radius: 1.4625rem 1.4625rem 0rem 0rem;
   height: 70%;
-  width: 100%;
-}
-#restaurants .cardsrestaurants .fchome {
-  justify-content: space-between;
-  padding: 1rem 1rem;
 }
 #restaurants .cardsrestaurants a {
   color: #000;
@@ -221,14 +365,117 @@ i.far {
 
 .picrestaurant {
   margin: auto;
-  max-height: 30rem;
-  width: 100%;
-  object-fit: cover;
+  max-height: 15rem;
 }
 
-#menurestaurant {
-  margin-top: -5rem;
+.menurestaurant {
   background-color: #f6f6f6;
+  max-width: 95%;
+  margin: auto;
+}
+.menurestaurant__header {
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  padding: 1rem;
+  border-radius: 1.4625rem 1.4625rem 0rem 0rem;
+  margin-top: -4rem;
+}
+.menurestaurant__header__like {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+}
+.menurestaurant__header__like:hover .heartunchecked {
+  opacity: 0;
+}
+.menurestaurant__header__like:hover .heartchecked {
+  fill: url(#lineargradient);
+  margin-left: -2rem;
+  animation: like 2s ease-in forwards;
+}
+.menurestaurant__header__like .heartunchecked {
+  opacity: 1;
+}
+.menurestaurant__header__like .heartchecked {
+  opacity: 0;
+  margin-left: -2rem;
+}
+.menurestaurant__header h1 {
+  font-size: 1.8rem;
+}
+.menurestaurant__menus {
+  justify-content: center;
+}
+@media screen and (min-width: 1320px) {
+  .menurestaurant__menus {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.menurestaurant__menus h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.menurestaurant__menus h2:after {
+  content: " ";
+  display: block;
+  width: 2rem;
+  border: 0.2rem solid #99E2D0;
+  background-color: #99E2D0;
+}
+.menurestaurant__menus .menu {
+  margin: 1rem 1rem;
+}
+@media screen and (min-width: 414px) {
+  .menurestaurant__menus .menu {
+    width: 21rem;
+  }
+}
+.menurestaurant__menus .menu .menu__details {
+  display: flex;
+}
+.menurestaurant__menus .menu .menu__details__dscrpt {
+  background-color: #FFF;
+  border-radius: 1.4625rem 0rem 0rem 1.4625rem;
+  padding: 0.5rem 0rem 0.5rem 0.5rem;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menurestaurant__menus .menu .menu__details__dscrpt p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menurestaurant__menus .menu .menu__details__prix {
+  background-color: #FFF;
+  border-radius: 0rem 1.4625rem 1.4625rem 0rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.menurestaurant__menus .menu .menu__details__animation {
+  display: none;
+}
+.menurestaurant__menus .menu .menu__details:hover .menu__details__prix {
+  border-radius: 0rem;
+}
+.menurestaurant__menus .menu .menu__details:hover .menu__details__animation {
+  display: flex;
+  align-items: center;
+  animation: slidein 1s ease forwards;
+  background-color: #99E2D0;
+  padding: 0.5rem;
+  border-radius: 0rem 1.4625rem 1.4625rem 0rem;
+}
+.menurestaurant__menus .menu .menu__details:hover i.fas.fa-check {
+  animation: rotate 0.5s ease forwards;
+}
+.menurestaurant__btn {
+  display: flex;
+  justify-content: center;
 }
 
 footer {
@@ -244,19 +491,19 @@ footer a:hover {
   color: #FFF;
 }
 footer h4 {
-  margin: 0 0 1rem 0;
+  margin: 0rem 0rem 1rem 0rem;
 }
 footer li {
   list-style: none;
-  margin: 0 0 0.5rem 0;
+  margin: 0rem 0rem 0.5rem 0rem;
 }
 
-input[type=search].inputsearchlocation {
+input[type=search].searchreservation__form--input {
   border: none;
   background: #eaeaea;
   height: 1.5rem;
 }
-input[type=search].inputsearchlocation::placeholder {
+input[type=search].searchreservation__form--input::placeholder {
   font-weight: bold;
   font-size: 1rem;
   text-align: center;
