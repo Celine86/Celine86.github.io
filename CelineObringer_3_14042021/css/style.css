@@ -134,11 +134,10 @@ i.fas.fa-check {
   }
 }
 @keyframes hide {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+  to {
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
 }
 @keyframes button-hover {
@@ -232,7 +231,7 @@ i.fas.fa-check {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: hide 4s ease-out forwards;
+  animation: hide 0s ease-out 3s forwards;
 }
 .loadingspinner__loader {
   display: flex;
