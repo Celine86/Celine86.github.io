@@ -5,7 +5,7 @@ footer, #fonctionnement ol, #reservation .inforeservation {
   flex-direction: column;
 }
 
-main {
+.menurestaurant__menus .menu .menu__details__dscrpt, main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,6 +97,13 @@ i.fas.fa-mobile-alt {
 }
 i.fas.fa-arrow-left {
   font-size: 2rem;
+  color: #000;
+}
+i.fas.fa-arrow-left:hover {
+  color: #9356DC;
+}
+i.fas.fa-arrow-left:visited {
+  color: #000;
 }
 i.fas.fa-check {
   font-size: 1rem;
@@ -110,6 +117,7 @@ i.fas.fa-check {
 
 .inforeservation__btn {
   padding: 1rem;
+  text-decoration: none;
 }
 
 .menurestaurant__btn--style {
@@ -117,21 +125,20 @@ i.fas.fa-check {
   width: 10rem;
 }
 
-@keyframes like {
+@keyframes progressbar {
   0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.75;
+    width: 0%;
   }
   100% {
+    width: 100%;
+  }
+}
+@keyframes hide {
+  0% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes button-hover {
@@ -215,6 +222,38 @@ i.fas.fa-check {
   margin: auto;
 }
 
+.loadingspinner {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 10000;
+  top: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hide 4s ease-out forwards;
+}
+.loadingspinner__loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loadingspinner__loader__progressbar {
+  margin-top: 1rem;
+  background-color: #9356DC;
+  border-radius: 1.4625rem;
+  width: 20rem;
+  padding: 0.1rem;
+}
+.loadingspinner__loader__progressbar > div {
+  background-color: #FF79DA;
+  width: 50%;
+  height: 0.5rem;
+  border-radius: 1.4625rem;
+  animation: progressbar 3s ease-out forwards;
+}
+
 #reservation {
   margin: 0.2rem 0rem 0rem 0rem;
 }
@@ -248,7 +287,7 @@ i.fas.fa-check {
   counter-reset: steps;
   margin: 0rem 0rem 3rem 0rem;
 }
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1290px) {
   #fonctionnement ol {
     display: flex;
     flex-direction: row;
@@ -267,7 +306,7 @@ i.fas.fa-check {
   font-weight: bold;
   box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
 }
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1290px) {
   #fonctionnement li {
     margin: 0rem 1rem;
   }
@@ -300,9 +339,10 @@ i.fas.fa-check {
   gap: 1rem 1rem;
   margin-bottom: 3rem;
 }
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1290px) {
   #restaurants .cardsrestaurants {
     display: grid;
+    gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
   }
@@ -314,10 +354,14 @@ i.fas.fa-check {
   width: 22rem;
   position: relative;
 }
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1290px) {
   #restaurants .cardsrestaurants .fhome {
     height: 20rem;
-    width: 34rem;
+    width: 32rem;
+  }
+  #restaurants .cardsrestaurants .fhome .fhome__figcaption {
+    display: flex;
+    align-items: center;
   }
 }
 #restaurants .cardsrestaurants .fhome__figcaption {
@@ -329,23 +373,8 @@ i.fas.fa-check {
   width: 2rem;
   height: 2rem;
 }
-#restaurants .cardsrestaurants .fhome__figcaption__like:hover .heartunchecked {
-  opacity: 0;
-}
-#restaurants .cardsrestaurants .fhome__figcaption__like:hover .heartchecked {
-  fill: url(#lineargradient);
-  margin-left: -2rem;
-  animation: like 2s ease-in-out forwards;
-}
-#restaurants .cardsrestaurants .fhome__figcaption__like .heartunchecked {
-  opacity: 1;
-}
-#restaurants .cardsrestaurants .fhome__figcaption__like .heartchecked {
-  opacity: 0;
-  margin-left: -2rem;
-}
 #restaurants .cardsrestaurants .fhome__span--new {
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: #008766;
   padding: 0.4rem;
   position: absolute;
@@ -387,28 +416,13 @@ i.fas.fa-check {
   width: 2rem;
   height: 2rem;
 }
-.menurestaurant__header__like:hover .heartunchecked {
-  opacity: 0;
-}
-.menurestaurant__header__like:hover .heartchecked {
-  fill: url(#lineargradient);
-  margin-left: -2rem;
-  animation: like 2s ease-in forwards;
-}
-.menurestaurant__header__like .heartunchecked {
-  opacity: 1;
-}
-.menurestaurant__header__like .heartchecked {
-  opacity: 0;
-  margin-left: -2rem;
-}
 .menurestaurant__header h1 {
   font-size: 1.8rem;
 }
 .menurestaurant__menus {
   justify-content: center;
 }
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1290px) {
   .menurestaurant__menus {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -427,10 +441,16 @@ i.fas.fa-check {
 }
 .menurestaurant__menus .menu {
   margin: 1rem 1rem;
+  width: 20rem;
 }
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 450px) {
   .menurestaurant__menus .menu {
-    width: 21rem;
+    width: 24rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .menurestaurant__menus .menu {
+    width: 90%;
   }
 }
 .menurestaurant__menus .menu .menu__details {
@@ -445,9 +465,25 @@ i.fas.fa-check {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menurestaurant__menus .menu .menu__details__dscrpt p {
+.menurestaurant__menus .menu .menu__details__dscrpt h3 {
+  font-size: medium;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+@media screen and (min-width: 450px) {
+  .menurestaurant__menus .menu .menu__details__dscrpt h3 {
+    font-size: large;
+  }
+}
+.menurestaurant__menus .menu .menu__details__dscrpt p {
+  font-size: 0.87rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media screen and (min-width: 450px) {
+  .menurestaurant__menus .menu .menu__details__dscrpt p {
+    font-size: medium;
+  }
 }
 .menurestaurant__menus .menu .menu__details__prix {
   background-color: #FFF;
@@ -483,12 +519,27 @@ footer {
   background-color: #353535;
   color: #FFF;
 }
+@media screen and (min-width: 450px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  footer h4 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+}
 footer a {
   color: #FFF;
 }
 footer a:hover {
   text-decoration: underline;
   color: #FFF;
+}
+footer p {
+  font-size: 0.87rem;
 }
 footer h4 {
   margin: 0rem 0rem 1rem 0rem;
