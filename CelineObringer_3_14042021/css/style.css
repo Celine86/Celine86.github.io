@@ -1,11 +1,9 @@
-/* $color-primary-hover: lighten($color-primary, 10%); */
-/* $color-secondary-hover: lighten($color-secondary, 10%); */
 footer, #fonctionnement ol, #reservation .inforeservation {
   display: flex;
   flex-direction: column;
 }
 
-.menurestaurant__menus .menu .menu__details__dscrpt, main {
+.menurestaurant__menus .menu .menu__details__dscrpt, main, .loadingspinner__loader {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,7 +50,6 @@ i.fas.fa-store, i.fas.fa-list, i.fas.fa-mobile-alt {
 }
 .menurestaurant__btn--style:hover, .inforeservation__btn:hover {
   box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
-  /* background: linear-gradient(0deg, $color-primary-hover, $color-secondary-hover);*/
   animation: 1.5s button-hover forwards;
 }
 
@@ -67,9 +64,24 @@ i.fas.fa-store, i.fas.fa-list, i.fas.fa-mobile-alt {
   height: 3.5rem;
 }
 
+.loadingspinner__loader__dots > div:nth-child(even), .loadingspinner__loader__dots > div:nth-child(odd) {
+  background: #99E2D0;
+  border-radius: 1.4625rem;
+  height: 1rem;
+  width: 1rem;
+  margin: 2rem 1rem;
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+#pages {
+  background-color: #353535;
+}
+#pages main {
+  background-color: #FFF;
 }
 
 body {
@@ -91,9 +103,6 @@ i.fas.fa-utensils {
 i.fas.fa-hands-helping {
   font-size: 1rem;
   padding: 0rem 1rem 0rem 0rem;
-}
-i.fas.fa-mobile-alt {
-  padding: 0rem 1.3rem 0rem 0.5rem !important;
 }
 i.fas.fa-arrow-left {
   font-size: 2rem;
@@ -125,19 +134,61 @@ i.fas.fa-check {
   width: 10rem;
 }
 
-@keyframes progressbar {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
+.loadingspinner {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 10;
+  top: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hide 0s ease-out 3s forwards;
 }
+.loadingspinner__loader__progressbar {
+  margin-top: 1rem;
+  background-color: #9356DC;
+  border-radius: 1.4625rem;
+  width: 20rem;
+  padding: 0.1rem;
+}
+.loadingspinner__loader__progressbar > div {
+  background-color: #FF79DA;
+  width: 50%;
+  height: 0.5rem;
+  border-radius: 1.4625rem;
+  animation: progressbar 3s ease-out forwards;
+}
+.loadingspinner__loader__dots {
+  display: flex;
+}
+.loadingspinner__loader__dots > div:nth-child(odd) {
+  animation: dots-pulse 1s infinite;
+}
+.loadingspinner__loader__dots > div:nth-child(even) {
+  animation: dots-pulse 1.5s infinite;
+}
+
 @keyframes hide {
   to {
     width: 0;
     height: 0;
     overflow: hidden;
+  }
+}
+@keyframes dots-pulse {
+  0% {
+    transform: translateY(0rem);
+    background: #99E2D0;
+  }
+  50% {
+    transform: translateY(2rem);
+    background: #FF79DA;
+  }
+  100% {
+    transform: translateY(0rem);
+    background: #9356DC;
   }
 }
 @keyframes button-hover {
@@ -215,42 +266,11 @@ i.fas.fa-check {
 }
 
 .headerrestaurant {
-  margin: 1rem;
+  padding: 1rem;
+  background-color: #FFF;
 }
 .headerrestaurant img {
   margin: auto;
-}
-
-.loadingspinner {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  z-index: 10000;
-  top: 0;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: hide 0s ease-out 3s forwards;
-}
-.loadingspinner__loader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.loadingspinner__loader__progressbar {
-  margin-top: 1rem;
-  background-color: #9356DC;
-  border-radius: 1.4625rem;
-  width: 20rem;
-  padding: 0.1rem;
-}
-.loadingspinner__loader__progressbar > div {
-  background-color: #FF79DA;
-  width: 50%;
-  height: 0.5rem;
-  border-radius: 1.4625rem;
-  animation: progressbar 3s ease-out forwards;
 }
 
 #reservation {
@@ -425,6 +445,7 @@ i.fas.fa-check {
   .menurestaurant__menus {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding: 2rem 1rem 0rem 1rem;
   }
 }
 .menurestaurant__menus h2 {
@@ -435,7 +456,7 @@ i.fas.fa-check {
   content: " ";
   display: block;
   width: 2rem;
-  border: 0.2rem solid #99E2D0;
+  border: 0.25rem solid #99E2D0;
 }
 .menurestaurant__menus .menu {
   margin: 1rem 1rem;
@@ -446,7 +467,7 @@ i.fas.fa-check {
     width: 24rem;
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 370px) {
   .menurestaurant__menus .menu {
     width: 90%;
   }
