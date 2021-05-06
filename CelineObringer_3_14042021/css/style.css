@@ -64,6 +64,13 @@ i.fas.fa-store, i.fas.fa-list, i.fas.fa-mobile-alt {
   height: 3.5rem;
 }
 
+.menurestaurant__menus .menu .menu__details:hover .menu__details__animation, .menurestaurant__menus .menu .menu__details__prix {
+  display: flex;
+  align-items: center;
+  border-radius: 0rem 1.4625rem 1.4625rem 0rem;
+  padding: 0.5rem;
+}
+
 .loadingspinner__loader__dots > div:nth-child(even), .loadingspinner__loader__dots > div:nth-child(odd) {
   background: #99E2D0;
   border-radius: 1.4625rem;
@@ -255,7 +262,7 @@ i.fas.fa-check {
 }
 @keyframes rotate {
   0% {
-    transform: rotate(90deg);
+    transform: rotate(-360deg);
   }
   100% {
     transform: rotate(0deg);
@@ -416,6 +423,11 @@ i.fas.fa-check {
   margin: auto;
   max-height: 15rem;
 }
+@media screen and (min-width: 1290px) {
+  .picrestaurant {
+    max-height: 25rem;
+  }
+}
 
 .menurestaurant {
   background-color: #f6f6f6;
@@ -452,12 +464,13 @@ i.fas.fa-check {
 .menurestaurant__menus h2 {
   text-transform: uppercase;
   font-weight: 500;
+  margin-bottom: 1.5rem;
 }
 .menurestaurant__menus h2:after {
   display: block;
   position: absolute;
   width: 2rem;
-  height: 0.25rem;
+  height: 0.3rem;
   content: "";
   background: #99E2D0;
 }
@@ -476,7 +489,6 @@ i.fas.fa-check {
   }
 }
 .menurestaurant__menus .menu .menu__details {
-  margin: 0.25rem;
   display: flex;
 }
 .menurestaurant__menus .menu .menu__details__dscrpt {
@@ -510,10 +522,6 @@ i.fas.fa-check {
 }
 .menurestaurant__menus .menu .menu__details__prix {
   background-color: #FFF;
-  border-radius: 0rem 1.4625rem 1.4625rem 0rem;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
 }
 .menurestaurant__menus .menu .menu__details__animation {
   display: none;
@@ -522,15 +530,11 @@ i.fas.fa-check {
   border-radius: 0rem;
 }
 .menurestaurant__menus .menu .menu__details:hover .menu__details__animation {
-  display: flex;
-  align-items: center;
-  animation: slidein 1s ease forwards;
+  animation: slidein 0.5s ease forwards;
   background-color: #99E2D0;
-  padding: 0.5rem;
-  border-radius: 0rem 1.4625rem 1.4625rem 0rem;
 }
 .menurestaurant__menus .menu .menu__details:hover i.fas.fa-check {
-  animation: rotate 0.5s ease forwards;
+  animation: rotate 0.75s ease forwards;
 }
 .menurestaurant__btn {
   display: flex;
