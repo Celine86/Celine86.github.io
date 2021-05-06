@@ -1,4 +1,4 @@
-footer, #fonctionnement ol, #reservation .inforeservation {
+#fonctionnement ol, #reservation .inforeservation, footer {
   display: flex;
   flex-direction: column;
 }
@@ -25,7 +25,7 @@ footer, #fonctionnement ol, #reservation .inforeservation {
   justify-content: center;
 }
 
-footer a, #restaurants .cardsrestaurants a {
+#restaurants .cardsrestaurants a, footer a {
   text-decoration: none;
 }
 
@@ -281,6 +281,53 @@ i.fas.fa-check {
   margin: auto;
 }
 
+footer {
+  padding: 2rem 1rem;
+  background-color: #353535;
+  color: #FFF;
+}
+@media screen and (min-width: 450px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  footer h4 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+}
+footer a {
+  color: #FFF;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: #FFF;
+}
+footer p {
+  font-size: 0.87rem;
+}
+footer h4 {
+  margin: 0rem 0rem 1rem 0rem;
+}
+footer li {
+  list-style: none;
+  margin: 0rem 0rem 0.5rem 0rem;
+}
+
+input[type=search].searchreservation__form--input {
+  border: none;
+  background: #eaeaea;
+  height: 1.5rem;
+}
+input[type=search].searchreservation__form--input::placeholder {
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  color: #000;
+}
+
 #reservation {
   margin: 0.2rem 0rem 0rem 0rem;
 }
@@ -528,6 +575,7 @@ i.fas.fa-check {
 }
 .menurestaurant__menus .menu .menu__details:hover .menu__details__prix {
   border-radius: 0rem;
+  /*box-shadow: 0.25rem 0.25rem -0.25rem rgba(0,0,0,0.2) !important;*/
 }
 .menurestaurant__menus .menu .menu__details:hover .menu__details__animation {
   animation: slidein 0.5s ease forwards;
@@ -539,53 +587,6 @@ i.fas.fa-check {
 .menurestaurant__btn {
   display: flex;
   justify-content: center;
-}
-
-footer {
-  padding: 2rem 1rem;
-  background-color: #353535;
-  color: #FFF;
-}
-@media screen and (min-width: 450px) {
-  footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  footer h4 {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-  }
-}
-footer a {
-  color: #FFF;
-}
-footer a:hover {
-  text-decoration: underline;
-  color: #FFF;
-}
-footer p {
-  font-size: 0.87rem;
-}
-footer h4 {
-  margin: 0rem 0rem 1rem 0rem;
-}
-footer li {
-  list-style: none;
-  margin: 0rem 0rem 0.5rem 0rem;
-}
-
-input[type=search].searchreservation__form--input {
-  border: none;
-  background: #eaeaea;
-  height: 1.5rem;
-}
-input[type=search].searchreservation__form--input::placeholder {
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: center;
-  color: #000;
 }
 
 /*# sourceMappingURL=style.css.map */
