@@ -455,7 +455,7 @@ i.fas.fa-check {
 }
 .menurestaurant__menus h2:after {
   content: " ";
-  display: block;
+  display: flex;
   width: 2rem;
   border: 0.25rem solid #99E2D0;
 }
